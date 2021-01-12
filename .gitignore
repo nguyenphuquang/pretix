@@ -16,6 +16,7 @@ __pycache__/
 _static/
 .idea
 .secret
+.bash_history
 atlassian-ide-plugin.xml
 pretixeu/
 local/
