@@ -39,7 +39,7 @@ msgstr "Tên ứng dụng"
 
 #: pretix/api/models.py:21
 msgid "Redirection URIs"
-msgstr "Redirection URI"
+msgstr "URI chuyển hướng"
 
 #: pretix/api/models.py:22
 msgid "Allowed URIs list, space separated"
@@ -2869,12 +2869,12 @@ msgstr "Không hợp lệ datetime đầu vào."
 
 #: pretix/base/models/items.py:1235
 msgid "Unknown country code."
-msgstr "mã quốc gia xác định."
+msgstr "Mã quốc gia không xác định."
 
 #: pretix/base/models/items.py:1249
 #: pretix/control/templates/pretixcontrol/items/question.html:68
 msgid "Answer"
-msgstr ""
+msgstr "Câu trả lời"
 
 #: pretix/base/models/items.py:1271
 msgid "The identifier \"{}\" is already used for a different option."
@@ -2882,20 +2882,20 @@ msgstr "Từ định danh \"{}\" đã được sử dụng cho một lựa chọ
 
 #: pretix/base/models/items.py:1274
 msgid "Question option"
-msgstr ""
+msgstr "Tùy chọn câu hỏi"
 
 #: pretix/base/models/items.py:1275
 msgid "Question options"
-msgstr ""
+msgstr "Tùy chọn câu hỏi"
 
 #: pretix/base/models/items.py:1360 pretix/control/forms/event.py:1326
 #: pretix/control/templates/pretixcontrol/items/quotas.html:56
 msgid "Total capacity"
-msgstr ""
+msgstr "Tổng dung lượng"
 
 #: pretix/base/models/items.py:1362 pretix/control/forms/item.py:307
 msgid "Leave empty for an unlimited number of tickets."
-msgstr ""
+msgstr "Để trống không giới hạn số lượng vé."
 
 #: pretix/base/models/items.py:1366 pretix/base/models/orders.py:1096
 #: pretix/control/templates/pretixcontrol/checkin/index.html:67
@@ -2904,11 +2904,11 @@ msgstr ""
 
 #: pretix/base/models/items.py:1374 pretix/control/forms/item.py:553
 msgid "Variations"
-msgstr "biến thể"
+msgstr "Biến thể"
 
 #: pretix/base/models/items.py:1382
 msgid "Close this quota permanently once it is sold out"
-msgstr ""
+msgstr "Đóng hạn ngạch này vĩnh viễn sau khi bán hết"
 
 #: pretix/base/models/items.py:1383
 msgid ""
@@ -2916,6 +2916,10 @@ msgid ""
 "sold, even if tickets become available again through cancellations or "
 "expiring orders. Of course, you can always re-open it manually."
 msgstr ""
+"Nếu bạn bật tính năng này, khi hạn ngạch được bán hết một lần, sẽ "
+"không còn vé nào được bán nữa, ngay cả khi vé có sẵn trở lại "
+"thông qua việc hủy hoặc đơn đặt hàng hết hạn. Tất nhiên, bạn luôn "
+"có thể mở lại theo cách thủ công."
 
 #: pretix/base/models/items.py:1391
 msgid "Allow to sell more tickets once people have checked out"
@@ -2930,6 +2934,13 @@ msgid ""
 "are ignored if they are set to \"Allow re-entering after an exit scan\" to "
 "prevent accidental overbooking."
 msgstr ""
+"Với tùy chọn này, hạn ngạch sẽ được giải phóng ngay sau khi mọi người được "
+"quét khi thoát ra khỏi sự kiện của bạn. Điều này sẽ chỉ xảy ra nếu họ "
+"đã được quét cả lúc nhập và lúc ra và lối ra là lần quét gần đây hơn. "
+"không quan trọng danh sách đăng ký nào trong số các lần quét đã được bật, "
+"nhưng danh sách đăng ký sẽ bị bỏ qua nếu chúng được đặt thành "
+"\"Cho phép nhập lại sau khi quét thoát\" để tránh tình cờ "
+"đặt trước quá nhiều."
 
 #: pretix/base/models/items.py:1403 pretix/base/models/vouchers.py:177
 #: pretix/control/templates/pretixcontrol/items/quota_edit.html:8
@@ -2943,20 +2954,20 @@ msgstr "Hạn ngạch"
 #: pretix/control/templates/pretixcontrol/subevents/bulk.html:397
 #: pretix/control/templates/pretixcontrol/subevents/detail.html:81
 msgid "Quotas"
-msgstr ""
+msgstr "Hạn ngạch"
 
 #: pretix/base/models/items.py:1479
 msgid "All variations must belong to an item contained in the items list."
 msgstr ""
-"Tất cả các biến phải thuộc về một mục chứa trong danh sách các mặt hàng."
+"Tất cả các biến thể phải thuộc về một mục có trong danh sách mục."
 
 #: pretix/base/models/items.py:1488
 msgid ""
 "One or more items has variations but none of these are in the variations "
 "list."
 msgstr ""
-"Một hoặc nhiều mục có biến thể nhưng không ai trong số này là trong danh "
-"sách các biến thể."
+"Một hoặc nhiều mục có các biến thể nhưng không mục nào trong số này nằm trong "
+"danh sách các biến thể."
 
 #: pretix/base/models/items.py:1494 pretix/base/models/waitinglist.py:149
 msgid "Subevent cannot be null for event series."
@@ -2970,7 +2981,7 @@ msgstr "Đơn hàng {val}"
 #: pretix/base/models/log.py:132
 #, python-brace-format
 msgid "Voucher {val}…"
-msgstr "Voucher {val}…"
+msgstr "Phiếu thưởng {val}…"
 
 #: pretix/base/models/log.py:142
 #, python-brace-format
@@ -2991,7 +3002,7 @@ msgstr "Hạn ngạch {val}"
 #: pretix/base/models/log.py:172
 #, python-brace-format
 msgid "Category {val}"
-msgstr "Hạng mục {val}"
+msgstr "Danh mục {val}"
 
 #: pretix/base/models/log.py:182
 #, python-brace-format
@@ -3009,15 +3020,15 @@ msgstr "chưa giải quyết"
 
 #: pretix/base/models/orders.py:123
 msgid "paid"
-msgstr ""
+msgstr "đã thanh toán"
 
 #: pretix/base/models/orders.py:124
 msgid "expired"
-msgstr ""
+msgstr "hết hạn"
 
 #: pretix/base/models/orders.py:125
 msgid "canceled"
-msgstr ""
+msgstr "bị hủy bỏ"
 
 #: pretix/base/models/orders.py:156 pretix/control/forms/filter.py:448
 msgid "Locale"
@@ -3407,11 +3418,11 @@ msgstr "Viết tắt là: \"VAT\""
 
 #: pretix/base/models/tax.py:117
 msgid "The configured product prices include the tax amount"
-msgstr ""
+msgstr "Giá sản phẩm đã định cấu hình bao gồm thuế"
 
 #: pretix/base/models/tax.py:121
 msgid "Use EU reverse charge taxation rules"
-msgstr ""
+msgstr "Sử dụng các quy tắc đánh thuế phí ngược của Liên minh Châu Âu"
 
 #: pretix/base/models/tax.py:123
 msgid ""
@@ -3422,28 +3433,29 @@ msgid ""
 "option after consulting a tax counsel. No warranty given for correct tax "
 "calculation. USE AT YOUR OWN RISK."
 msgstr ""
-"Không được khuyến nghị. Hầu hết các sự kiện sẽ KHÔNG đủ điều kiện để tính "
-"phí ngược lại kể từnơi đánh thuế là địa điểm diễn ra sự kiện. Tùy chọn này "
-"vô hiệu hóatính thuế VAT cho tất cả khách hàng bên ngoài EU và cho khách "
-"hàng doanh nghiệp trongcác quốc gia EU khác nhau đã nhập ID VAT EU hợp lệ. "
-"Chỉ bật điều nàytùy chọn sau khi tham khảo ý kiến tư vấn thuế. Không đưa ra "
-"bảo đảm về mức thuế chính xáctính toán. SỬ DỤNG RỦI RO CỦA RIÊNG BẠN."
+"Không được khuyến nghị. Hầu hết các sự kiện sẽ KHÔNG đủ điều kiện để "
+"tính phí ngược lại vì địa điểm đánh thuế là địa điểm diễn ra sự kiện. "
+"Tùy chọn này vô hiệu hóa việc tính thuế VAT cho tất cả khách hàng "
+"bên ngoài EU và cho các khách hàng doanh nghiệp ở các nước EU khác nhau đã "
+"nhập VAT EU hợp lệ ID. Chỉ bật tùy chọn này sau khi tham khảo "
+"ý kiến của cố vấn thuế. Không có bảo đảm cho việc tính thuế "
+"chính xác. USE AT YOUR OWN RISK."
 
 #: pretix/base/models/tax.py:130 pretix/plugins/stripe/payment.py:174
 msgid "Merchant country"
-msgstr "nước Merchant"
+msgstr "Quốc gia của người bán"
 
 #: pretix/base/models/tax.py:132
 msgid ""
 "Your country of residence. This is the country the EU reverse charge rule "
 "will not apply in, if configured above."
 msgstr ""
-"Đất nước các bạn cư trú. Đây là đất nước cai trị phụ trách ngược EU sẽ không "
-"áp dụng trong, nếu cấu hình ở trên."
+"Quốc gia cư trú của bạn. Đây là quốc gia mà quy tắc tính phí ngược "
+"của Liên minh Châu Âu sẽ không áp dụng, nếu được định cấu hình ở trên."
 
 #: pretix/base/models/tax.py:165
 msgid "You need to set your home country to use the reverse charge feature."
-msgstr ""
+msgstr "Bạn cần đặt quốc gia của mình để sử dụng tính năng tính phí ngược lại."
 
 #: pretix/base/models/tax.py:169
 #, python-brace-format
@@ -4655,6 +4667,9 @@ msgid ""
 "pretixSCAN on iOS and changes semantics of offline scanning – please refer "
 "to documentation or support for details)"
 msgstr ""
+"Chữ ký loại 1 (đối với các sự kiện rất lớn, không hoạt động với "
+"phần mềm check-in trên iOS và thay đổi ngữ nghĩa của quá trình "
+"quét ngoại tuyến - vui lòng tham khảo tài liệu hoặc hỗ trợ để biết chi tiết)"
 
 #: pretix/base/services/cart.py:52 pretix/base/services/orders.py:73
 msgid ""
@@ -6081,6 +6096,10 @@ msgid ""
 "feature and an order contains tickets for multiple event dates, download of "
 "all tickets will be available if at least one of the event dates allows it."
 msgstr ""
+"Tải vé sẽ được cung cấp sau ngày này. Nếu bạn sử dụng tính năng "
+"chuỗi sự kiện và đơn đặt hàng chứa vé cho nhiều ngày diễn ra sự kiện, "
+"bạn sẽ có thể tải xuống tất cả các vé nếu ít nhất một trong "
+"các ngày diễn ra sự kiện cho phép."
 
 #: pretix/base/settings.py:1003
 msgid "Generate tickets for add-on products"
@@ -6092,6 +6111,9 @@ msgid ""
 "for add-on products. With this option, a separate ticket is issued for every "
 "add-on product as well."
 msgstr ""
+"Mặc định, vé chỉ được phát hành cho các sản phẩm được chọn riêng lẻ, không "
+"phải cho các sản phẩm bổ trợ. Với tùy chọn này, một vé riêng cũng "
+"được phát hành cho mọi sản phẩm bổ sung."
 
 #: pretix/base/settings.py:1016
 msgid "Generate tickets for all products"
@@ -6109,7 +6131,7 @@ msgstr ""
 
 #: pretix/base/settings.py:1029
 msgid "Generate tickets for pending orders"
-msgstr ""
+msgstr "Tạo vé cho các đơn đặt hàng đang chờ xử lý"
 
 #: pretix/base/settings.py:1030
 msgid ""
@@ -6121,7 +6143,7 @@ msgstr ""
 
 #: pretix/base/settings.py:1041
 msgid "Do not issue ticket before email address is validated"
-msgstr ""
+msgstr "Không xuất vé trước khi địa chỉ email được xác thực"
 
 #: pretix/base/settings.py:1042
 msgid ""
@@ -6131,10 +6153,15 @@ msgid ""
 "from the page as soon as they clicked a link in the email. Does not affect "
 "orders performed through other sales channels."
 msgstr ""
+"Nếu được bật, vé sẽ không được cung cấp để tải xuống trực tiếp sau khi mua. "
+"Chúng sẽ được đính kèm với email xác nhận thanh toán (nếu kích thước tệp không "
+"quá lớn) và khách hàng sẽ có thể tải xuống ngay từ trang khi họ nhấp vào "
+"liên kết trong email. Không ảnh hưởng đến các đơn đặt hàng được thực hiện "
+"qua các kênh bán hàng khác. "
 
 #: pretix/base/settings.py:1054
 msgid "Show availability in event overviews"
-msgstr ""
+msgstr "Hiển thị tính khả dụng trong tổng quan về sự kiện"
 
 #: pretix/base/settings.py:1055
 msgid ""
@@ -6142,6 +6169,10 @@ msgid ""
 "make for longer page loading times if you have lots of events and the shown "
 "status might be out of date for up to two minutes."
 msgstr ""
+"Nếu được chọn, danh sách các sự kiện sẽ hiển thị nếu các sự kiện được "
+"bán hết. Điều này có thể khiến thời gian tải trang lâu hơn nếu bạn có "
+"nhiều sự kiện và trạng thái được hiển thị có thể hết hạn trong "
+"tối đa hai phút."
 
 #: pretix/base/settings.py:1068 pretix/base/settings.py:1076
 #: pretix/presale/templates/pretixpresale/organizers/calendar.html:25
@@ -6880,17 +6911,19 @@ msgstr "Trợ giúp văn bản của trường email"
 
 #: pretix/base/settings.py:1916
 msgid "Info text"
-msgstr ""
+msgstr "Văn bản thông tin"
 
 #: pretix/base/settings.py:1918
 msgid ""
 "Not displayed anywhere by default, but if you want to, you can use this e.g. "
 "in ticket templates."
 msgstr ""
+"Không được hiển thị ở bất kỳ đâu theo mặc định, nhưng nếu muốn, bạn "
+"có thể sử dụng điều này, ví dụ: trong các mẫu vé."
 
 #: pretix/base/settings.py:1927
 msgid "Allow creating a new team during event creation"
-msgstr ""
+msgstr "Cho phép tạo nhóm mới trong quá trình tạo sự kiện"
 
 #: pretix/base/settings.py:1928
 msgid ""
@@ -6899,41 +6932,47 @@ msgid ""
 "allows users to create an event-specified team on-the-fly, even when they do "
 "not have \"Can change teams and permissions\" permission."
 msgstr ""
+"Người dùng không có quyền truy cập vào tất cả các sự kiện thuộc nhà tổ chức "
+"này, phải chọn một trong các nhóm của họ để có quyền truy cập vào sự kiện "
+"đã tạo. Cài đặt này cho phép người dùng tạo nhanh một nhóm do sự kiện "
+"chỉ định, ngay cả khi họ không có quyền \"Có thể thay đổi nhóm và quyền\"."
 
 #: pretix/base/settings.py:1992 pretix/base/settings.py:2002
 msgid "Event start time (descending)"
-msgstr ""
+msgstr "Thời gian bắt đầu sự kiện (giảm dần)"
 
 #: pretix/base/settings.py:1994 pretix/base/settings.py:2004
 msgid "Name (descending)"
-msgstr ""
+msgstr "Tên (giảm dần)"
 
 #: pretix/base/settings.py:1999
 msgctxt "subevent"
 msgid "Date ordering"
-msgstr ""
+msgstr "Sắp xếp ngày"
 
 #: pretix/base/settings.py:2015
 msgid "Link back to organizer overview on all event pages"
-msgstr ""
+msgstr "Liên kết trở lại tổng quan về người tổ chức trên tất cả các trang sự kiện"
 
 #: pretix/base/settings.py:2024
 msgid "Homepage text"
-msgstr ""
+msgstr "Văn bản trang chủ"
 
 #: pretix/base/settings.py:2026
 msgid "This will be displayed on the organizer homepage."
-msgstr ""
+msgstr "Điều này sẽ được hiển thị trên trang chủ của đơn vị."
 
 #: pretix/base/settings.py:2039
 msgid "Length of gift card codes"
-msgstr ""
+msgstr "Độ dài của mã thẻ quà tặng"
 
 #: pretix/base/settings.py:2040
 msgid ""
 "The system generates by default {}-character long gift card codes. However, "
 "if a different length is required, it can be set here."
 msgstr ""
+"Theo mặc định, hệ thống tạo mã thẻ quà tặng dài {} ký tự. Tuy nhiên, "
+"nếu độ dài khác được yêu cầu, bạn có thể đặt mã này tại đây."
 
 #: pretix/base/settings.py:2050
 msgid "Validity of gift card codes in years"
@@ -6969,11 +7008,11 @@ msgstr "Nút hiển thị để sao chép đầu vào của người dùng từ 
 
 #: pretix/base/settings.py:2094
 msgid "Most common English titles"
-msgstr ""
+msgstr "Các title tiếng Anh thông dụng nhất"
 
 #: pretix/base/settings.py:2104
 msgid "Most common German titles"
-msgstr ""
+msgstr "Các title tiếng Đức phổ biến nhất"
 
 #: pretix/base/settings.py:2112
 msgctxt "person_name_salutation"
@@ -6990,7 +7029,7 @@ msgstr "Ông"
 #: pretix/base/settings.py:2212 pretix/base/settings.py:2226
 #: pretix/base/settings.py:2278 pretix/base/settings.py:2296
 msgid "Given name"
-msgstr ""
+msgstr "Tên"
 
 #: pretix/base/settings.py:2121 pretix/base/settings.py:2134
 #: pretix/base/settings.py:2150 pretix/base/settings.py:2166
@@ -6998,7 +7037,7 @@ msgstr ""
 #: pretix/base/settings.py:2213 pretix/base/settings.py:2227
 #: pretix/base/settings.py:2279 pretix/base/settings.py:2297
 msgid "Family name"
-msgstr ""
+msgstr "Họ"
 
 #: pretix/base/settings.py:2125 pretix/base/settings.py:2141
 #: pretix/base/settings.py:2157 pretix/base/settings.py:2172
@@ -7007,7 +7046,7 @@ msgstr ""
 #: pretix/base/settings.py:2287 pretix/base/settings.py:2310
 msgctxt "person_name_sample"
 msgid "John"
-msgstr ""
+msgstr "Văn A"
 
 #: pretix/base/settings.py:2126 pretix/base/settings.py:2142
 #: pretix/base/settings.py:2158 pretix/base/settings.py:2174
@@ -7016,7 +7055,7 @@ msgstr ""
 #: pretix/base/settings.py:2311
 msgctxt "person_name_sample"
 msgid "Doe"
-msgstr ""
+msgstr "Nguyễn"
 
 #: pretix/base/settings.py:2132 pretix/base/settings.py:2148
 #: pretix/base/settings.py:2180 pretix/base/settings.py:2277
@@ -7034,7 +7073,7 @@ msgstr ""
 
 #: pretix/base/settings.py:2164 pretix/base/settings.py:2181
 msgid "First name"
-msgstr "Tên đầu tiên"
+msgstr "Tên"
 
 #: pretix/base/settings.py:2165 pretix/base/settings.py:2182
 msgid "Middle name"
@@ -7104,11 +7143,11 @@ msgstr "Ngày thanh toán cuối cùng không thể trước khi kết thúc pre
 #: pretix/base/shredder.py:39 pretix/base/shredder.py:42
 msgid "Your event needs to be over for at least 30 days to use this feature."
 msgstr ""
-"sự kiện của bạn cần phải được qua ít nhất 30 ngày để sử dụng tính năng này."
+"Sự kiện của bạn cần phải được qua ít nhất 30 ngày để sử dụng tính năng này."
 
 #: pretix/base/shredder.py:44
 msgid "Your ticket shop needs to be offline to use this feature."
-msgstr "cửa hàng vé của bạn cần phải được ẩn để sử dụng tính năng này."
+msgstr "Shop bán vé của bạn cần phải được ẩn để sử dụng tính năng này."
 
 #: pretix/base/shredder.py:126
 msgid "Phone numbers"
@@ -7927,33 +7966,35 @@ msgstr ""
 #: pretix/plugins/sendmail/forms.py:82
 #, python-brace-format
 msgid "Available placeholders: {list}"
-msgstr "placeholders sẵn: {list}"
+msgstr "Mã có thể sử dụng: {list}"
 
 #: pretix/control/forms/event.py:1093
 msgid ""
 "You can activate either SSL or STARTTLS security, but not both at the same "
 "time."
 msgstr ""
+"Bạn có thể kích hoạt bảo mật SSL hoặc STARTTLS, nhưng không thể kích hoạt "
+"cả hai cùng một lúc."
 
 #: pretix/control/forms/event.py:1106
 msgid "Ticket code generator"
-msgstr ""
+msgstr "Trình tạo mã vé"
 
 #: pretix/control/forms/event.py:1107
 msgid "For advanced users, usually does not need to be changed."
-msgstr ""
+msgstr "Dành cho người dùng nâng cao, thường không cần thay đổi."
 
 #: pretix/control/forms/event.py:1157
 msgid "Any country"
-msgstr ""
+msgstr "Bất kỳ quốc gia nào"
 
 #: pretix/control/forms/event.py:1158
 msgid "European Union"
-msgstr ""
+msgstr "Liên minh Châu Âu"
 
 #: pretix/control/forms/event.py:1171
 msgid "Any customer"
-msgstr ""
+msgstr "Any customer"
 
 #: pretix/control/forms/event.py:1172
 msgid "Individual"
@@ -7961,27 +8002,27 @@ msgstr "Cá nhân"
 
 #: pretix/control/forms/event.py:1173
 msgid "Business"
-msgstr ""
+msgstr "Doanh nghiệp"
 
 #: pretix/control/forms/event.py:1174
 msgid "Business with valid VAT ID"
-msgstr "Kinh doanh với ID VAT hợp lệ"
+msgstr "Doanh nghiệpj với VAT ID hợp lệ"
 
 #: pretix/control/forms/event.py:1180
 msgid "Charge VAT"
-msgstr ""
+msgstr "Tính thuế VAT"
 
 #: pretix/control/forms/event.py:1182
 msgid "No VAT"
-msgstr "không VAT"
+msgstr "Không VAT"
 
 #: pretix/control/forms/event.py:1183
 msgid "Sale not allowed"
-msgstr ""
+msgstr "Không được phép bán"
 
 #: pretix/control/forms/event.py:1187
 msgid "Deviating tax rate"
-msgstr ""
+msgstr "Giảm thuế suất"
 
 #: pretix/control/forms/event.py:1192
 msgid "Text on invoice"
@@ -8733,6 +8774,9 @@ msgid ""
 "If you check this box, this operation will be performed even if it leads to "
 "an overbooked quota and you having sold more tickets than you planned!"
 msgstr ""
+"Nếu bạn chọn hộp này, thao tác này sẽ được thực hiện ngay cả khi nó "
+"dẫn đến hạn ngạch đặt trước quá nhiều và bạn đã bán được nhiều vé "
+"hơn dự định!"
 
 #: pretix/control/forms/orders.py:80
 msgid "Overbook quota and ignore late payment"
@@ -8753,7 +8797,7 @@ msgstr ""
 #: pretix/control/forms/orders.py:107
 #: pretix/control/templates/pretixcontrol/order/deny.html:19
 msgid "Notify user by e-mail"
-msgstr ""
+msgstr "Thông báo cho người dùng bằng e-mail"
 
 #: pretix/control/forms/orders.py:114
 msgid "Keep a cancellation fee of"
@@ -8767,6 +8811,11 @@ msgid ""
 "want to keep them. Please always enter a gross value, tax will be calculated "
 "automatically."
 msgstr ""
+"Nếu bạn giữ một khoản phí, tất cả các vị trí trong đơn đặt hàng này "
+"sẽ bị hủy và đơn đặt hàng sẽ được giảm xuống phí hủy đã trả. Phí "
+"thanh toán và phí vận chuyển cũng sẽ bị hủy, vì vậy hãy bao gồm chúng "
+"trong phí hủy của bạn nếu bạn muốn giữ chúng . Vui lòng luôn nhập "
+"tổng giá trị, thuế sẽ được tính tự động. "
 
 #: pretix/control/forms/orders.py:146
 msgid "Payment amount"
@@ -8848,11 +8897,11 @@ msgstr ""
 #: pretix/control/forms/orders.py:356 pretix/control/forms/orders.py:393
 #: pretix/control/forms/orders.py:409 pretix/control/forms/orders.py:437
 msgid "(Unchanged)"
-msgstr ""
+msgstr "(Không thay đổi)"
 
 #: pretix/control/forms/orders.py:351 pretix/control/forms/orders.py:432
 msgid "New price (gross)"
-msgstr ""
+msgstr "Gía mới (tổng)"
 
 #: pretix/control/forms/orders.py:360
 msgid "Generate a new secret"
@@ -8860,7 +8909,7 @@ msgstr "Tạo một bí mật mới"
 
 #: pretix/control/forms/orders.py:364
 msgid "Cancel this position"
-msgstr ""
+msgstr "Huỷ mục con của đơn hàng"
 
 #: pretix/control/forms/orders.py:368
 msgid "Split into new order"
@@ -8868,11 +8917,11 @@ msgstr "Chia thành đơn hàng mới"
 
 #: pretix/control/forms/orders.py:441
 msgid "Remove this fee"
-msgstr ""
+msgstr "Xoá phí này"
 
 #: pretix/control/forms/orders.py:456
 msgid "Invalidate secrets"
-msgstr ""
+msgstr "Mã bí mật không hợp lệ"
 
 #: pretix/control/forms/orders.py:457
 msgid ""
@@ -8888,41 +8937,44 @@ msgstr ""
 #: pretix/control/forms/orders.py:734 pretix/control/forms/vouchers.py:228
 #: pretix/plugins/sendmail/forms.py:24 pretix/plugins/sendmail/forms.py:109
 msgid "Subject"
-msgstr ""
+msgstr "Tiêu đề"
 
 #: pretix/control/forms/orders.py:514
 msgid "Recipient"
-msgstr ""
+msgstr "Người nhận"
 
 #: pretix/control/forms/orders.py:520 pretix/control/forms/orders.py:534
 #: pretix/control/forms/orders.py:715 pretix/control/forms/orders.py:742
 #: pretix/control/forms/vouchers.py:234 pretix/plugins/sendmail/forms.py:25
 #: pretix/plugins/sendmail/forms.py:114
 msgid "Message"
-msgstr ""
+msgstr "Nội dung"
 
 #: pretix/control/forms/orders.py:547
 msgid ""
 "Cancel the order. All tickets will no longer work. This can not be reverted."
 msgstr ""
+"Hủy đơn đặt hàng. Tất cả các vé sẽ không còn hoạt động. Không thể hoàn nguyên."
 
 #: pretix/control/forms/orders.py:548
 msgid ""
 "Mark the order as pending and allow the user to pay the open amount with "
 "another payment method."
 msgstr ""
+"Đánh dấu đơn đặt hàng là đang chờ xử lý và cho phép người dùng thanh toán "
+"số tiền chưa thanh toán bằng một phương thức thanh toán khác."
 
 #: pretix/control/forms/orders.py:550
 msgid "Do nothing and keep the order as it is."
-msgstr ""
+msgstr "Không làm gì và giữ đơn hàng như cũ"
 
 #: pretix/control/forms/orders.py:577
 msgid "The refund amount needs to be positive and less than {}."
-msgstr ""
+msgstr "Số tiền hoàn lại phải là số dương và nhỏ hơn {}."
 
 #: pretix/control/forms/orders.py:583
 msgid "You need to specify an amount for a partial refund."
-msgstr ""
+msgstr "Bạn cần chỉ định số tiền để được hoàn lại một phần."
 
 #: pretix/control/forms/orders.py:595
 msgid "Cancel all dates"
@@ -9444,18 +9496,17 @@ msgid "Position #{posid} has been checked out for list \"{list}\"."
 msgstr ""
 
 #: pretix/control/logdisplay.py:243
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Position #{posid} has been checked in at {datetime} for list \"{list}\"."
+#, python-brace-format
 msgid ""
 "Position #{posid} has been checked in at {datetime} for list \"{list}\"."
 msgstr ""
-"Vị trí #{posid} đã được đăng ký vào {datetime} cho danh sách \"{list}\"."
+"Mục con đơn hàng #{posid} đã được check-in vào {datetime} cho danh sách \"{list}\"."
 
 #: pretix/control/logdisplay.py:249
 #, python-brace-format
 msgid "Position #{posid} has been checked in for list \"{list}\"."
 msgstr ""
+"Mục con đơn hàng #{posid} đã được check-in cho danh sách \"{list}\"."
 
 #: pretix/control/logdisplay.py:256
 #, python-brace-format
@@ -9607,10 +9658,8 @@ msgid "A custom email has been sent."
 msgstr "Một email tùy chỉnh đã được gửi đi."
 
 #: pretix/control/logdisplay.py:310
-#, fuzzy
-#| msgid "A custom email has been sent."
 msgid "A custom email has been sent to an attendee."
-msgstr "Một email tùy chỉnh đã được gửi đi."
+msgstr "Một email tùy chỉnh đã được gửi tới người tham dự."
 
 #: pretix/control/logdisplay.py:311
 msgid ""
@@ -9622,12 +9671,12 @@ msgstr ""
 #: pretix/control/logdisplay.py:313
 msgid ""
 "An email has been sent with a warning that the order is about to expire."
-msgstr ""
+msgstr "Một email đã được gửi với cảnh báo rằng đơn đặt hàng sắp hết hạn."
 
 #: pretix/control/logdisplay.py:315
 msgid ""
 "An email has been sent to notify the user that the order has been canceled."
-msgstr ""
+msgstr "Một email đã được gửi để thông báo cho người dùng rằng đơn đặt hàng đã bị hủy."
 
 #: pretix/control/logdisplay.py:316
 msgid ""
@@ -9676,17 +9725,21 @@ msgid ""
 "An email has been sent to notify the user that the order has been received "
 "and requires payment."
 msgstr ""
+"Một email đã được gửi để thông báo cho người dùng rằng đơn đặt hàng đã được "
+"nhận và yêu cầu thanh toán."
 
 #: pretix/control/logdisplay.py:325
 msgid ""
 "An email has been sent to notify the user that the order has been received "
 "and requires approval."
 msgstr ""
+"Một email đã được gửi để thông báo cho người dùng rằng đơn đặt hàng đã được "
+"nhận và yêu cầu phê duyệt."
 
 #: pretix/control/logdisplay.py:328
 msgid ""
 "An email with a link to the order detail page has been resent to the user."
-msgstr ""
+msgstr "Một email có liên kết đến trang chi tiết đơn hàng đã được gửi lại cho người dùng."
 
 #: pretix/control/logdisplay.py:329
 #, python-brace-format
@@ -9699,8 +9752,7 @@ msgid "Payment {local_id} has been canceled."
 msgstr ""
 
 #: pretix/control/logdisplay.py:331
-#, fuzzy, python-brace-format
-#| msgid "Canceling payment {local_id} has failed."
+#, python-brace-format
 msgid "Canceling payment {local_id} has failed."
 msgstr "Không thể hủy thanh toán {local_id}."
 
@@ -9749,7 +9801,6 @@ msgstr "Hoàn trả {local_id} đã bị hủy."
 
 #: pretix/control/logdisplay.py:341
 #, python-brace-format
-#| msgid "Refund {local_id} has failed."
 msgid "Refund {local_id} has failed."
 msgstr "Hoàn trả {local_id} không thành công."
 
@@ -9904,27 +9955,27 @@ msgstr "Hạn ngạch đã đóng cửa."
 
 #: pretix/control/logdisplay.py:381 pretix/control/views/item.py:903
 msgid "The quota has been re-opened."
-msgstr ""
+msgstr "Hạn ngạch đã được mở lại."
 
 #: pretix/control/logdisplay.py:382
 msgid "The category has been added."
-msgstr "Phạm trù đã được thêm vào."
+msgstr "Danh mục đã được thêm vào."
 
 #: pretix/control/logdisplay.py:383
 msgid "The category has been deleted."
-msgstr ""
+msgstr "Danh mục đã bị xóa."
 
 #: pretix/control/logdisplay.py:384
 msgid "The category has been changed."
-msgstr "Phạm trù đã được thay đổi."
+msgstr "Danh mục đã được thay đổi."
 
 #: pretix/control/logdisplay.py:385
 msgid "The question has been added."
-msgstr ""
+msgstr "Câu hỏi đã được thêm vào."
 
 #: pretix/control/logdisplay.py:386
 msgid "The question has been deleted."
-msgstr ""
+msgstr "Câu hỏi đã bị xóa."
 
 #: pretix/control/logdisplay.py:387
 msgid "The question has been changed."
@@ -9932,7 +9983,7 @@ msgstr "Câu hỏi đặt ra đã được thay đổi."
 
 #: pretix/control/logdisplay.py:388
 msgid "The tax rule has been added."
-msgstr ""
+msgstr "Quy tắc thuế đã được thêm vào."
 
 #: pretix/control/logdisplay.py:389
 msgid "The tax rule has been deleted."
@@ -9952,7 +10003,7 @@ msgstr "Danh sách check-in đã bị xóa."
 
 #: pretix/control/logdisplay.py:393
 msgid "The check-in list has been changed."
-msgstr "Check-in danh sách đã được thay đổi."
+msgstr "Danh sách check-in đã được thay đổi."
 
 #: pretix/control/logdisplay.py:394
 msgid "The event settings have been changed."
@@ -10095,11 +10146,11 @@ msgstr "Một hạn ngạch đã được thay đổi kể từ ngày sự kiệ
 #: pretix/control/logdisplay.py:427
 msgctxt "subevent"
 msgid "A quota has been removed from the event date."
-msgstr ""
+msgstr "Hạn ngạch đã bị xóa khỏi ngày diễn ra sự kiện."
 
 #: pretix/control/logdisplay.py:428
 msgid "The device has been created."
-msgstr ""
+msgstr "Thiết bị đã được tạo."
 
 #: pretix/control/logdisplay.py:429
 msgid "The device has been changed."
@@ -10107,15 +10158,15 @@ msgstr "Thiết bị này đã được thay đổi."
 
 #: pretix/control/logdisplay.py:430
 msgid "Access of the device has been revoked."
-msgstr ""
+msgstr "Quyền truy cập của thiết bị đã bị thu hồi."
 
 #: pretix/control/logdisplay.py:431
 msgid "The device has been initialized."
-msgstr ""
+msgstr "Thiết bị đã được khởi tạo."
 
 #: pretix/control/logdisplay.py:432
 msgid "The access token of the device has been regenerated."
-msgstr ""
+msgstr "Token truy cập của thiết bị đã được tạo lại."
 
 #: pretix/control/logdisplay.py:433
 msgid "The device has notified the server of an hardware or software update."
@@ -10125,11 +10176,11 @@ msgstr ""
 
 #: pretix/control/logdisplay.py:434
 msgid "The gift card has been created."
-msgstr ""
+msgstr "Thẻ quà tặng đã được tạo."
 
 #: pretix/control/logdisplay.py:435 pretix/control/views/organizer.py:1159
 msgid "The gift card has been changed."
-msgstr ""
+msgstr "Thẻ quà tặng đã được thay đổi."
 
 #: pretix/control/logdisplay.py:436
 msgid "A manual transaction has been performed."
@@ -10137,11 +10188,11 @@ msgstr "Một giao dịch thủ công đã được thực hiện."
 
 #: pretix/control/logdisplay.py:460
 msgid "The settings of a payment provider have been changed."
-msgstr ""
+msgstr "Cài đặt của nhà cung cấp dịch vụ thanh toán đã được thay đổi."
 
 #: pretix/control/logdisplay.py:463
 msgid "The settings of a ticket output provider have been changed."
-msgstr ""
+msgstr "Cài đặt của nhà cung cấp đầu ra vé đã được thay đổi."
 
 #: pretix/control/logdisplay.py:466
 msgid "The user confirmed the following message: \"{}\""
@@ -10153,29 +10204,28 @@ msgid ""
 "Position #{posid} has been checked in manually at {datetime} on list "
 "\"{list}\"."
 msgstr ""
+"Mục con đơn hàng #{posid} đã được check-in theo cách thủ công lúc {datetime} trên danh sách \"{list}\"."
 
 #: pretix/control/logdisplay.py:492
 #, python-brace-format
 msgid ""
 "Position #{posid} has been checked in again at {datetime} on list \"{list}\"."
 msgstr ""
+"Mục con đơn hàng # {posid} đã được check-in lại vào {datetime} trên danh sách \"{list}\"."
 
 #: pretix/control/logdisplay.py:507
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The check-in of position #{posid} on list \"{list}\" has been reverted."
+#,  python-brace-format
 msgid "The check-in of position #{posid} on list \"{list}\" has been reverted."
 msgstr ""
-"Việc đăng ký vị trí #{posid} trên danh sách \"{list}\" đã được hoàn nguyên."
+"Việc checkin của mục con đơn hàng #{posid} trên danh sách \"{list}\" đã được hoàn nguyên."
 
 #: pretix/control/logdisplay.py:513
 #, python-brace-format
 msgid "{user} has been added to the team."
-msgstr ""
+msgstr "{user} đã được thêm vào nhóm."
 
 #: pretix/control/logdisplay.py:516
-#, fuzzy, python-brace-format
-#| msgid "{user} has been removed from the team."
+#, python-brace-format
 msgid "{user} has been removed from the team."
 msgstr "{user} đã bị xóa khỏi đội."
 
@@ -10185,10 +10235,9 @@ msgid "{user} has joined the team using the invite sent to {email}."
 msgstr "{user} đã tham gia nhóm bằng lời mời được gửi đến {email}."
 
 #: pretix/control/logdisplay.py:524
-#, fuzzy, python-brace-format
-#| msgid "{user} has been invited to the team."
+#, python-brace-format
 msgid "{user} has been invited to the team."
-msgstr "{user} đã được mời tham dự đội."
+msgstr "{user} đã được mời tham dự nhóm."
 
 #: pretix/control/logdisplay.py:527
 #, python-brace-format
@@ -10198,26 +10247,26 @@ msgstr "Lời mời cho {user} đã được gửi lại."
 #: pretix/control/logdisplay.py:530
 #, python-brace-format
 msgid "The invite for {user} has been revoked."
-msgstr ""
+msgstr "Lời mời cho {user} đã bị thu hồi."
 
 #: pretix/control/logdisplay.py:533
 #, python-brace-format
 msgid "The token \"{name}\" has been created."
-msgstr "Mã thông báo \"{name}\" đã được tạo."
+msgstr "Token \"{name}\" đã được tạo."
 
 #: pretix/control/logdisplay.py:536
 #, python-brace-format
 msgid "The token \"{name}\" has been revoked."
-msgstr "Mã thông báo \"{name}\" đã bị thu hồi."
+msgstr "Token \"{name}\" đã bị thu hồi."
 
 #: pretix/control/logdisplay.py:539
 msgid "Your account settings have been changed."
-msgstr ""
+msgstr "Cài đặt tài khoản của bạn đã được thay đổi."
 
 #: pretix/control/logdisplay.py:541 pretix/control/views/user.py:198
 #, python-brace-format
 msgid "Your email address has been changed to {email}."
-msgstr ""
+msgstr "Địa chỉ email của bạn đã được thay đổi thành {email}."
 
 #: pretix/control/logdisplay.py:543 pretix/control/views/user.py:195
 msgid "Your password has been changed."
@@ -10225,15 +10274,15 @@ msgstr "Mật khẩu của bạn đã được thay đổi."
 
 #: pretix/control/logdisplay.py:545
 msgid "Your account has been enabled."
-msgstr ""
+msgstr "Tài khoản của bạn đã được kích hoạt."
 
 #: pretix/control/logdisplay.py:547
 msgid "Your account has been disabled."
-msgstr ""
+msgstr "Tài khoản của bạn đã bị vô hiệu hóa."
 
 #: pretix/control/logdisplay.py:551
 msgid "You impersonated {}."
-msgstr ""
+msgstr "Bạn đang thử vai trò {}"
 
 #: pretix/control/logdisplay.py:554
 msgid "You stopped impersonating {}."
@@ -10244,12 +10293,14 @@ msgid ""
 "The selected event was not found or you have no permission to administrate "
 "it."
 msgstr ""
+"Sự kiện đã chọn không được tìm thấy hoặc bạn không có quyền quản lý sự kiện đó."
 
 #: pretix/control/middleware.py:123
 msgid ""
 "The selected organizer was not found or you have no permission to "
 "administrate it."
 msgstr ""
+"Không tìm thấy đơn vị đã chọn hoặc bạn không có quyền quản lý nó."
 
 #: pretix/control/navigation.py:16 pretix/control/navigation.py:299
 #: pretix/control/templates/pretixcontrol/dashboard.html:3
@@ -11418,28 +11469,31 @@ msgid ""
 "duplicate payment attempts. You should review the cases and consider "
 "refunding the overpaid amount to the user."
 msgstr ""
+"Sự kiện này chứa <strong>đơn đặt hàng được thanh toán thừa</strong>, "
+"chẳng hạn như do các lần thanh toán trùng lặp. Bạn nên xem xét các "
+"trường hợp và xem xét hoàn lại số tiền đã thanh toán quá mức cho người dùng."
 
 #: pretix/control/templates/pretixcontrol/event/index.html:26
 msgid "Show overpaid orders"
-msgstr "Hiện thừa lệnh"
+msgstr "Hiển thị các đơn đặt hàng đã thanh toán quá mức"
 
 #: pretix/control/templates/pretixcontrol/event/index.html:31
 msgid ""
 "This event contains <strong>pending refunds</strong> that you should take "
 "care of."
 msgstr ""
-"Sự kiện này chứa <strong> hoàn lại tiền cấp phát </strong> mà bạn nên chăm "
-"sóc."
+"Sự kiện này chứa <strong>khoản hoàn trả đang chờ xử lý</strong> mà bạn nên lưu ý."
 
 #: pretix/control/templates/pretixcontrol/event/index.html:35
 msgid "Show pending refunds"
-msgstr ""
+msgstr "Hiển thị khoản tiền hoàn lại đang chờ xử lý"
 
 #: pretix/control/templates/pretixcontrol/event/index.html:40
 msgid ""
 "This event contains <strong>requested cancellations</strong> that you should "
 "take care of."
 msgstr ""
+"Sự kiện này chứa <strong>yêu cầu hủy</strong> mà bạn nên lưu ý."
 
 #: pretix/control/templates/pretixcontrol/event/index.html:44
 msgid "Show orders requesting cancellation"
@@ -11587,15 +11641,15 @@ msgstr ""
 
 #: pretix/control/templates/pretixcontrol/event/live.html:76
 msgid "Permanently delete all orders created in test mode"
-msgstr ""
+msgstr "Xóa vĩnh viễn tất cả các đơn hàng đã tạo ở chế độ test"
 
 #: pretix/control/templates/pretixcontrol/event/live.html:81
 msgid "Disable test mode"
-msgstr ""
+msgstr "Tắt chế độ test"
 
 #: pretix/control/templates/pretixcontrol/event/live.html:87
 msgid "Your shop is currently in production mode."
-msgstr "Shop của bạn hiện đang ở chế độ sản xuất."
+msgstr "Shop của bạn hiện đang ở chế độ chinh thức."
 
 #: pretix/control/templates/pretixcontrol/event/live.html:90
 msgid ""
@@ -12092,7 +12146,7 @@ msgid ""
 "is an useful timesaver if you create lots and lots of items."
 msgstr ""
 "Bạn ở đây có thể định nghĩa một tập hợp các thuộc tính siêu dữ liệu (ví dụ: "
-"biến) mà sau này bạn có thể thiết lập cho các hạng mục của bạn và tái sử "
+"biến) mà sau này bạn có thể thiết lập cho các danh mục của bạn và tái sử "
 "dụng ở những nơi như bố trí vé. Đây là một tiết kiệm thời gian hữu ích nếu "
 "bạn tạo nhiều và rất nhiều các mặt hàng."
 
@@ -12150,6 +12204,11 @@ msgid ""
 "for the correct handling of taxes in your ticket shop. If in doubt, please "
 "contact a lawyer or tax consultant."
 msgstr ""
+"Những cài đặt này dành cho người dùng nâng cao. Xem "
+"<a href=\"%(docs)s\">tài liệu</a> để biết thêm thông tin. "
+"Lưu ý rằng chúng tôi không chịu trách nhiệm về việc xử lý chính xác "
+"các khoản thuế trong cửa hàng bán vé của bạn Nếu nghi ngờ, vui lòng "
+"liên hệ với luật sư hoặc nhà tư vấn thuế."
 
 #: pretix/control/templates/pretixcontrol/event/tax_edit.html:42
 msgid "Custom taxation rules"
@@ -12195,49 +12254,47 @@ msgstr "Tạo quy tắc thuế mới"
 
 #: pretix/control/templates/pretixcontrol/event/tax_index.html:27
 msgid "Rate"
-msgstr ""
+msgstr "Tỷ lệ"
 
 #: pretix/control/templates/pretixcontrol/event/tickets.html:8
 #: pretix/presale/templates/pretixpresale/event/fragment_downloads.html:7
 msgid "Ticket download"
-msgstr ""
+msgstr "Tải vé"
 
 #: pretix/control/templates/pretixcontrol/event/tickets.html:11
 msgid "Download settings"
-msgstr ""
+msgstr "Thiết lập tải xuống"
 
 #: pretix/control/templates/pretixcontrol/event/tickets.html:14
 msgid ""
 "You activated ticket downloads but no output provider is enabled. Be sure to "
 "enable a plugin and activate an output provider."
 msgstr ""
+"Bạn đã kích hoạt tải xuống vé nhưng không có nhà cung cấp đầu ra nào "
+"được bật. Hãy đảm bảo bật plugin và kích hoạt nhà cung cấp đầu ra."
 
 #: pretix/control/templates/pretixcontrol/event/tickets.html:28
 msgid "Download formats"
-msgstr ""
+msgstr "Định dạng tải xuống"
 
 #: pretix/control/templates/pretixcontrol/event/tickets.html:54
-#, fuzzy, python-format
-#| msgid ""
-#| "There are no ticket outputs available. Please go to the <a  "
-#| "%(plugin_settings_href)s>plugin settings</a> and activate one or more "
-#| "ticket output plugins."
+#, python-format
 msgid ""
 "There are no ticket outputs available. Please go to the <a "
 "%(plugin_settings_href)s>plugin settings</a> and activate one or more ticket "
 "output plugins."
 msgstr ""
 "Không có kết quả đầu ra vé có sẵn. Xin vui lòng đến <a  "
-"%(plugin_settings_href)s> Plugin cài đặt </a> và kích hoạt một hoặc nhiều "
-"plugins sản lượng vé."
+"%(plugin_settings_href)s>Cài đặt plugin</a> và kích hoạt một hoặc nhiều "
+"plugins vé."
 
 #: pretix/control/templates/pretixcontrol/event/tickets.html:62
 msgid "Download time"
-msgstr "thời gian tải"
+msgstr "Thời gian tải"
 
 #: pretix/control/templates/pretixcontrol/event/tickets.html:66
 msgid "Ticket codes"
-msgstr ""
+msgstr "Các mã vé"
 
 #: pretix/control/templates/pretixcontrol/event/widget.html:10
 msgid ""
@@ -12254,6 +12311,8 @@ msgid ""
 "To embed the widget onto your website, simply copy the following code to the "
 "<code>&lt;head&gt;</code> section of your website:"
 msgstr ""
+"Để nhúng widget vào trang web của bạn, chỉ cần sao chép mã sau vào phần "
+"<code>&lt;head&gt;</code> trên trang web của bạn:"
 
 #: pretix/control/templates/pretixcontrol/event/widget.html:25
 msgid ""
@@ -12286,25 +12345,28 @@ msgstr ""
 
 #: pretix/control/templates/pretixcontrol/event/widget.html:79
 msgid "Generate widget code"
-msgstr ""
+msgstr "Tạo mã widget"
 
 #: pretix/control/templates/pretixcontrol/events/create_base.html:6
 #, python-format
 msgid "Step %(step)s"
-msgstr ""
+msgstr "Bước %(step)s"
 
 #: pretix/control/templates/pretixcontrol/events/create_base.html:31
 msgid ""
 "Every event needs to be created as part of an organizer account. Currently, "
 "you do not have access to any organizer accounts."
 msgstr ""
+"Mọi sự kiện cần được tạo như một phần của tài khoản đơn vị. "
+"Hiện tại, bạn không có quyền truy cập vào bất kỳ tài khoản "
+"đơn vị nào."
 
 #: pretix/control/templates/pretixcontrol/events/create_base.html:35
 #: pretix/control/templates/pretixcontrol/organizers/create.html:4
 #: pretix/control/templates/pretixcontrol/organizers/create.html:6
 #: pretix/control/templates/pretixcontrol/organizers/index.html:27
 msgid "Create a new organizer"
-msgstr ""
+msgstr "Tạo mới một đơn vị"
 
 #: pretix/control/templates/pretixcontrol/events/create_basics.html:7
 #: pretix/control/templates/pretixcontrol/item/create.html:11
@@ -12319,7 +12381,7 @@ msgstr "Thông tin chung"
 
 #: pretix/control/templates/pretixcontrol/events/create_basics.html:14
 msgid "Set to random"
-msgstr ""
+msgstr "Đặt thành ngẫu nhiên"
 
 #: pretix/control/templates/pretixcontrol/events/create_basics.html:18
 msgid ""
@@ -12565,8 +12627,6 @@ msgid "The last update check was not successful."
 msgstr "Kiểm tra cập nhật cuối cùng đã không thành công."
 
 #: pretix/control/templates/pretixcontrol/global_update.html:28
-#, fuzzy
-#| msgid "The pretix.eu server could not be reached."
 msgid "The pretix.eu server returned an error code."
 msgstr "Không thể truy cập máy chủ pretix.eu."
 
@@ -12579,8 +12639,7 @@ msgid "This installation appears to be a development installation."
 msgstr "Cài đặt này dường như là cài đặt phát triển."
 
 #: pretix/control/templates/pretixcontrol/global_update.html:47
-#, fuzzy, python-format
-#| msgid "Last updated: %(date)s"
+#, python-format
 msgid "Last updated: %(date)s"
 msgstr "Cập nhật lần cuối: %(date)s"
 
@@ -12832,7 +12891,7 @@ msgstr "Thêm một biến thể mới"
 
 #: pretix/control/templates/pretixcontrol/item/index.html:95
 msgid "Availability"
-msgstr ""
+msgstr "Có hiệu lực"
 
 #: pretix/control/templates/pretixcontrol/item/index.html:115
 msgid "Tickets & check-in"
@@ -13184,6 +13243,9 @@ msgid ""
 "applied to. If you apply two quotas to the same product, it will only be "
 "available if <strong>both</strong> quotas have capacity left."
 msgstr ""
+"Vui lòng chọn các sản phẩm hoặc biến thể sản phẩm mà hạn ngạch này sẽ được "
+"áp dụng. Nếu bạn áp dụng hai hạn ngạch cho cùng một sản phẩm, hạn ngạch "
+"sẽ chỉ khả dụng nếu <strong>cả hai</strong> hạn ngạch còn lại."
 
 #: pretix/control/templates/pretixcontrol/items/quota_edit.html:41
 msgid "Advanced options"
@@ -13199,23 +13261,30 @@ msgid ""
 "total number of tickets sold and the number of a specific ticket type at the "
 "same time."
 msgstr ""
+"Để làm cho sản phẩm của bạn thực sự có sẵn, bạn cũng cần hạn ngạch. "
+"Hạn ngạch xác định, số lượng phiên bản pretix sản phẩm của bạn sẽ bán. "
+"Bằng cách này, bạn có thể định cấu hình xem sự kiện của mình có thể "
+"có số lượng người tham dự không giới hạn hay số lượng người tham dự bị "
+"giới hạn. Bạn có thể gán một sản phẩm cho nhiều hạn ngạch để đáp ứng "
+"các yêu cầu phức tạp hơn, ví dụ: nếu bạn muốn giới hạn tổng số vé "
+"đã bán và số lượng một loại vé cụ thể cùng một lúc."
 
 #: pretix/control/templates/pretixcontrol/items/quotas.html:25
 msgid "Your search did not match any quotas."
-msgstr ""
+msgstr "Tìm kiếm của bạn không khớp với bất kỳ hạn ngạch nào."
 
 #: pretix/control/templates/pretixcontrol/items/quotas.html:27
 msgid "You haven't created any quotas yet."
-msgstr ""
+msgstr "Bạn chưa tạo bất kỳ hạn ngạch nào."
 
 #: pretix/control/templates/pretixcontrol/items/quotas.html:34
 #: pretix/control/templates/pretixcontrol/items/quotas.html:38
 msgid "Create a new quota"
-msgstr ""
+msgstr "Tạo hạn ngạch mới"
 
 #: pretix/control/templates/pretixcontrol/items/quotas.html:60
 msgid "Capacity left"
-msgstr "trái suất"
+msgstr "Sức chứa còn lại"
 
 #: pretix/control/templates/pretixcontrol/multi_languages_widget.html:9
 msgid ""
@@ -13235,10 +13304,12 @@ msgid ""
 "and will show in English instead. You can help translating at translate."
 "pretix.eu."
 msgstr ""
+"Bản dịch cho ngôn ngữ này vẫn đang được tiến hành. Ngôn ngữ này hiện chỉ "
+"có thể được chọn trên các bản cài đặt phát triển của nextix."
 
 #: pretix/control/templates/pretixcontrol/multi_languages_widget.html:14
 msgid "Unofficial translation"
-msgstr "dịch không chính thức"
+msgstr "Dịch không chính thức"
 
 #: pretix/control/templates/pretixcontrol/oauth/app_delete.html:4
 #: pretix/control/templates/pretixcontrol/oauth/app_delete.html:6
@@ -13255,7 +13326,7 @@ msgstr ""
 #: pretix/control/templates/pretixcontrol/oauth/app_list.html:4
 #: pretix/control/templates/pretixcontrol/oauth/app_list.html:6
 msgid "Your applications"
-msgstr ""
+msgstr "Ứng dụng của bạn"
 
 #: pretix/control/templates/pretixcontrol/oauth/app_list.html:33
 msgid "Create new application"
@@ -13269,12 +13340,12 @@ msgstr "Không có ứng dụng đăng ký được nêu ra."
 #: pretix/control/templates/pretixcontrol/oauth/app_register.html:4
 #: pretix/control/templates/pretixcontrol/oauth/app_register.html:6
 msgid "Register a new application"
-msgstr ""
+msgstr "Đăng ký một ứng dụng mới"
 
 #: pretix/control/templates/pretixcontrol/oauth/app_rollkeys.html:4
 #: pretix/control/templates/pretixcontrol/oauth/app_rollkeys.html:6
 msgid "Generate new application secret"
-msgstr ""
+msgstr "Tạo mã bí mật mới cho ứng dụng"
 
 #: pretix/control/templates/pretixcontrol/oauth/app_rollkeys.html:9
 #, python-format
@@ -13290,7 +13361,7 @@ msgstr ""
 #: pretix/control/templates/pretixcontrol/oauth/app_update.html:4
 #: pretix/control/templates/pretixcontrol/oauth/app_update.html:6
 msgid "Update an application"
-msgstr ""
+msgstr "Cập nhật ứng dụng"
 
 #: pretix/control/templates/pretixcontrol/oauth/auth_revoke.html:4
 #: pretix/control/templates/pretixcontrol/oauth/auth_revoke.html:6
@@ -13315,7 +13386,7 @@ msgstr "Thu hồi"
 #: pretix/control/templates/pretixcontrol/oauth/authorized.html:6
 #: pretix/control/templates/pretixcontrol/user/settings.html:61
 msgid "Authorized applications"
-msgstr ""
+msgstr "Các ứng dụng được ủy quyền"
 
 #: pretix/control/templates/pretixcontrol/oauth/authorized.html:9
 msgid "Manage your own apps"
@@ -13323,16 +13394,16 @@ msgstr "Quản lý các ứng dụng của riêng bạn"
 
 #: pretix/control/templates/pretixcontrol/oauth/authorized.html:18
 msgid "Permissions"
-msgstr ""
+msgstr "Quyền"
 
 #: pretix/control/templates/pretixcontrol/oauth/authorized.html:59
 msgid "No applications have access to your pretix account."
-msgstr ""
+msgstr "Không có ứng dụng nào có quyền truy cập vào tài khoản nextix.cloud của bạn."
 
 #: pretix/control/templates/pretixcontrol/order/approve.html:4
 #: pretix/control/templates/pretixcontrol/order/approve.html:8
 msgid "Approve order"
-msgstr ""
+msgstr "Phê duyệt đơn đặt hàng"
 
 #: pretix/control/templates/pretixcontrol/order/approve.html:10
 msgid "Do you really want to approve this order?"
@@ -13375,6 +13446,9 @@ msgid ""
 "This will <strong>not</strong> automatically transfer the money back, but "
 "you will be offered options to refund the payment afterwards."
 msgstr ""
+"Điều này sẽ <strong>không</strong> tự động chuyển tiền trở lại, "
+"nhưng bạn sẽ được cung cấp các tùy chọn để hoàn trả khoản "
+"thanh toán sau đó."
 
 #: pretix/control/templates/pretixcontrol/order/cancel.html:38
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:169
@@ -13595,7 +13669,7 @@ msgstr "Chi tiết đơn hàng: %(code)s"
 #: pretix/control/templates/pretixcontrol/order/index.html:16
 #: pretix/presale/templates/pretixpresale/event/fragment_cart.html:6
 msgid "taxes"
-msgstr "thuế"
+msgstr "Thuế"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:43
 msgid "Approve"
@@ -13608,7 +13682,7 @@ msgstr "Từ chối"
 #: pretix/control/templates/pretixcontrol/order/index.html:54
 #: pretix/control/templates/pretixcontrol/order/pay_complete.html:31
 msgid "Mark as paid"
-msgstr "Mark as paid"
+msgstr "Đánh dấu là đã thanh toán"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:66
 #: pretix/control/templates/pretixcontrol/order/reactivate.html:5
@@ -13658,7 +13732,7 @@ msgstr "Khách hàng yêu cầu bạn hủy đơn đặt hàng với các cài �
 
 #: pretix/control/templates/pretixcontrol/order/index.html:131
 msgid "Original payment method"
-msgstr ""
+msgstr "Phương thức thanh toán gốc"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:140
 msgid "Delete request"
@@ -13667,11 +13741,11 @@ msgstr "Xóa yêu cầu"
 #: pretix/control/templates/pretixcontrol/order/index.html:153
 #: pretix/presale/templates/pretixpresale/event/order.html:9
 msgid "Order details"
-msgstr ""
+msgstr "Chi tiết đơn hàng"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:163
 msgid "Cancellation date"
-msgstr ""
+msgstr "Ngày huỷ"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:185
 msgid ""
@@ -13696,11 +13770,11 @@ msgstr ""
 
 #: pretix/control/templates/pretixcontrol/order/index.html:240
 msgid "Generate cancellation"
-msgstr "tạo hủy"
+msgstr "Tạo lệnh hủy"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:242
 msgid "Cancel and reissue"
-msgstr ""
+msgstr "Huỷ và cấp lại"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:258
 #: pretix/control/templates/pretixcontrol/order/index.html:270
@@ -13729,35 +13803,32 @@ msgstr "Được đánh dấu tự động vắng mặt: %(date)s"
 #: pretix/control/templates/pretixcontrol/order/index.html:315
 #, python-format
 msgid "Exit scan: %(date)s"
-msgstr ""
+msgstr "Quét ra: %(date)s"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:318
-#, fuzzy, python-format
-#| msgid "Additional entry scan: %(date)s"
+#, python-format
 msgid "Additional entry scan: %(date)s"
-msgstr "Quét mục nhập bổ sung: %(date)s"
+msgstr "Quét bổ sung: %(date)s"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:320
-#, fuzzy, python-format
-#| msgid "Automatically checked in: %(date)s"
+#, python-format
 msgid "Automatically checked in: %(date)s"
 msgstr "Đã đăng ký tự động: %(date)s"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:322
-#, fuzzy, python-format
-#| msgid "Entry scan: %(date)s"
+#, python-format
 msgid "Entry scan: %(date)s"
-msgstr "Quét mục nhập: %(date)s"
+msgstr "Quét vào: %(date)s"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:335
 #: pretix/presale/templates/pretixpresale/event/fragment_cart.html:26
 msgid "Voucher code used:"
-msgstr ""
+msgstr "Phiếu thưởng sử dụng"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:337
 #, python-format
 msgid "Original price: %(price)s"
-msgstr ""
+msgstr "Giá gốc: %(price)s"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:373
 msgid "Ticket page"
@@ -13780,7 +13851,7 @@ msgstr "không có câu trả lời"
 
 #: pretix/control/templates/pretixcontrol/order/index.html:446
 msgid "This question will be asked during check-in."
-msgstr ""
+msgstr "Câu hỏi này sẽ được hỏi khi check-in."
 
 #: pretix/control/templates/pretixcontrol/order/index.html:458
 msgid ""
@@ -13796,8 +13867,7 @@ msgstr "gây mất an toàn"
 #: pretix/control/templates/pretixcontrol/order/index.html:526
 #: pretix/presale/templates/pretixpresale/event/fragment_cart.html:203
 #: pretix/presale/templates/pretixpresale/event/fragment_cart.html:234
-#, fuzzy, python-format
-#| msgid "<strong>plus</strong> %(rate)s%% %(taxname)s"
+#, python-format
 msgid "<strong>plus</strong> %(rate)s%% %(taxname)s"
 msgstr "<strong>cộng</strong> %(rate)s%% %(taxname)s"
 
@@ -13940,7 +14010,7 @@ msgstr ""
 #: pretix/control/templates/pretixcontrol/order/mail_history.html:50
 #: pretix/plugins/sendmail/templates/pretixplugins/sendmail/history.html:50
 msgid "Subject:"
-msgstr "Môn học:"
+msgstr "Tiêu đề:"
 
 #: pretix/control/templates/pretixcontrol/order/pay.html:5
 #: pretix/control/templates/pretixcontrol/order/pay.html:9
@@ -13953,12 +14023,14 @@ msgstr "Bạn có thực sự muốn tạo ra một thanh toán thủ cho đơn 
 
 #: pretix/control/templates/pretixcontrol/order/pay.html:36
 msgid "Create payment"
-msgstr ""
+msgstr "Tạo thanh toán"
 
 #: pretix/control/templates/pretixcontrol/order/pay_cancel.html:10
 msgid ""
 "Do you really want to cancel this payment? You cannot revert this action."
 msgstr ""
+"Bạn có thực sự muốn hủy khoản thanh toán này không? Bạn không thể hoàn nguyên "
+"hành động này."
 
 #: pretix/control/templates/pretixcontrol/order/pay_cancel.html:25
 msgid "Yes, cancel payment"
@@ -14011,7 +14083,7 @@ msgstr ""
 #: pretix/control/templates/pretixcontrol/order/refund_start.html:5
 #: pretix/control/templates/pretixcontrol/order/refund_start.html:9
 msgid "Refund order"
-msgstr ""
+msgstr "Hoàn tiền đơn hàng"
 
 #: pretix/control/templates/pretixcontrol/order/refund_choose.html:21
 msgid "How should the refund be sent?"
@@ -14019,7 +14091,7 @@ msgstr ""
 
 #: pretix/control/templates/pretixcontrol/order/refund_choose.html:28
 msgid "Payment confirmation date"
-msgstr "ngày xác nhận thanh toán"
+msgstr "Ngày xác nhận thanh toán"
 
 #: pretix/control/templates/pretixcontrol/order/refund_choose.html:30
 msgid "Amount not refunded"
@@ -14027,14 +14099,12 @@ msgstr "Số tiền không hoàn trả"
 
 #: pretix/control/templates/pretixcontrol/order/refund_choose.html:31
 msgid "Refund"
-msgstr ""
+msgstr "Hoàn tiền"
 
 #: pretix/control/templates/pretixcontrol/order/refund_choose.html:45
-#, fuzzy
-#| msgid "Automatically refund"
 msgctxt "amount_label"
 msgid "Automatically refund"
-msgstr "tự động hoàn"
+msgstr "Tự động hoàn"
 
 #: pretix/control/templates/pretixcontrol/order/refund_choose.html:63
 msgid "Automatically refund full amount"
@@ -14815,7 +14885,7 @@ msgstr "Xác thực hai yếu tố bị vô hiệu hóa"
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:63
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:109
 msgid "Remove"
-msgstr "Tẩy"
+msgstr "Xoá"
 
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:53
 msgid "invited, pending response"
@@ -14823,7 +14893,7 @@ msgstr ""
 
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:55
 msgid "resend invite"
-msgstr "gửi lại mời"
+msgstr "Mời lại"
 
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:73
 msgid ""
@@ -14838,7 +14908,7 @@ msgstr ""
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:81
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:122
 msgid "Add"
-msgstr ""
+msgstr "Thêm"
 
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:88
 msgid "API tokens"
@@ -14846,19 +14916,18 @@ msgstr ""
 
 #: pretix/control/templates/pretixcontrol/organizers/team_members.html:132
 msgid "Team history"
-msgstr "lịch sử đội"
+msgstr "Lịch sử nhóm"
 
 #: pretix/control/templates/pretixcontrol/organizers/teams.html:7
 msgid "The list below shows all teams that exist within this organizer."
-msgstr ""
+msgstr "Danh sách dưới đây hiển thị tất cả các nhóm trong đơn vị này."
 
 #: pretix/control/templates/pretixcontrol/organizers/teams.html:17
 msgid "Members"
-msgstr ""
+msgstr "Các thành viên"
 
 #: pretix/control/templates/pretixcontrol/organizers/teams.html:33
-#, fuzzy, python-format
-#| msgid " %(count)s elements"
+#, python-format
 msgid "+ %(count)s invited"
 msgstr "+ %(count)s được mời"
 
@@ -15054,19 +15123,19 @@ msgstr "Chiều rộng (mm)"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:181
 msgid "Height (mm)"
-msgstr ""
+msgstr "Chiều cao (mm)"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:187
 msgid "Background PDF"
-msgstr "Bối cảnh PDF"
+msgstr "PDF nền"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:190
 msgid "Create empty background"
-msgstr ""
+msgstr "Tạo nền trống"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:195
 msgid "Upload custom background"
-msgstr ""
+msgstr "Tải lên nền dạng PDF"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:201
 msgid ""
@@ -15074,10 +15143,13 @@ msgid ""
 "If you want to use a custom background, it already needs to have the correct "
 "size."
 msgstr ""
+"Sau khi bạn thay đổi kích thước trang, bạn cần tạo một nền trống mới. "
+"Nếu bạn muốn sử dụng một nền tùy chỉnh, nó đã phải có kích thước "
+"chính xác."
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:210
 msgid "Preferred language"
-msgstr "ngôn ngữ ưa thích"
+msgstr "Ngôn ngữ ưa thích"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:221
 msgid "x (mm)"
@@ -15085,11 +15157,11 @@ msgstr "x (mm)"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:226
 msgid "y (mm)"
-msgstr ""
+msgstr "y (mm)"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:233
 msgid "Size (mm)"
-msgstr ""
+msgstr "Kích thước (mm)"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:241
 msgid ""
@@ -15099,7 +15171,7 @@ msgstr ""
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:250
 msgid "Font size (pt)"
-msgstr ""
+msgstr "Cỡ font (pt)"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:269
 msgid "Flow multiple lines downward from specified position"
@@ -15107,31 +15179,31 @@ msgstr "Chảy nhiều dòng xuống từ vị trí nhất định"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:278
 msgid "Text color"
-msgstr ""
+msgstr "Màu văn bản"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:321
 msgid "Rotation (°)"
-msgstr ""
+msgstr "Quay (độ)"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:328
 msgid "Style"
-msgstr ""
+msgstr "Kiểu"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:330
 msgid "Dark"
-msgstr ""
+msgstr "Tối"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:331
 msgid "Light"
-msgstr "Ánh sáng"
+msgstr "Sáng"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:337
 msgid "Text content"
-msgstr ""
+msgstr "Nội dung văn bản"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:344
 msgid "Event attribute:"
-msgstr "thuộc tính sự kiện:"
+msgstr "Thuộc tính sự kiện:"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:349
 msgid "Item attribute:"
@@ -15143,7 +15215,7 @@ msgstr "Khác ..."
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:362
 msgid "Add a new object"
-msgstr ""
+msgstr "Tạo một đối tượng"
 
 #: pretix/control/templates/pretixcontrol/pdf/index.html:371
 msgid "QR code for Check-In"
@@ -15306,8 +15378,7 @@ msgstr ""
 
 #: pretix/control/templates/pretixcontrol/subevents/bulk.html:107
 #: pretix/control/templates/pretixcontrol/subevents/bulk.html:218
-#, fuzzy, python-format
-#| msgid "On the %(setpos)s %(weekday)s"
+#, python-format
 msgid "On the %(setpos)s %(weekday)s"
 msgstr "Vào %(setpos)s %(weekday)s"
 
@@ -15326,14 +15397,12 @@ msgstr "Lặp đến %(until)s"
 #: pretix/control/templates/pretixcontrol/subevents/bulk.html:258
 msgctxt "subevent"
 msgid "Preview"
-msgstr ""
+msgstr "Xem trước"
 
 #: pretix/control/templates/pretixcontrol/subevents/bulk.html:265
-#, fuzzy
-#| msgid "Times"
 msgctxt "subevent"
 msgid "Times"
-msgstr "thời gian"
+msgstr "Thời gian"
 
 #: pretix/control/templates/pretixcontrol/subevents/bulk.html:337
 msgid "Add a new time slot"
@@ -15352,15 +15421,13 @@ msgstr ""
 #: pretix/control/templates/pretixcontrol/subevents/bulk.html:553
 #: pretix/control/templates/pretixcontrol/subevents/detail.html:237
 msgid "Add a new check-in list"
-msgstr "Thêm một check-in mới danh sách"
+msgstr "Thêm một danh sách check-in mới"
 
 #: pretix/control/templates/pretixcontrol/subevents/delete.html:4
 #: pretix/control/templates/pretixcontrol/subevents/delete.html:6
-#, fuzzy
-#| msgid "Delete date"
 msgctxt "subevent"
 msgid "Delete date"
-msgstr "ngày Xóa"
+msgstr "Ngày xóa"
 
 #: pretix/control/templates/pretixcontrol/subevents/delete.html:9
 #, python-format
@@ -15419,8 +15486,6 @@ msgid "Use as a template for a new date"
 msgstr ""
 
 #: pretix/control/templates/pretixcontrol/subevents/index.html:137
-#, fuzzy
-#| msgid "Use as a template for many new dates"
 msgctxt "subevent"
 msgid "Use as a template for many new dates"
 msgstr "Sử dụng làm mẫu cho nhiều ngày mới"
@@ -15773,15 +15838,15 @@ msgstr "Thiết lập đăng nhập"
 
 #: pretix/control/templates/pretixcontrol/user/settings.html:50
 msgid "Change two-factor settings"
-msgstr ""
+msgstr "Thay đổi cài đặt hai yếu tố"
 
 #: pretix/control/templates/pretixcontrol/user/settings.html:65
 msgid "Show applications"
-msgstr ""
+msgstr "Hiển thị các ứng dụng"
 
 #: pretix/control/templates/pretixcontrol/user/settings.html:74
 msgid "Show account history"
-msgstr ""
+msgstr "Hiển thị lịch sử tài khoản"
 
 #: pretix/control/templates/pretixcontrol/user/staff_session_edit.html:4
 msgid "Staff session"
@@ -15789,7 +15854,7 @@ msgstr "Phiên nhân viên"
 
 #: pretix/control/templates/pretixcontrol/user/staff_session_edit.html:6
 msgid "Session notes"
-msgstr ""
+msgstr "Ghi chú phiên"
 
 #: pretix/control/templates/pretixcontrol/user/staff_session_edit.html:17
 msgid "Audit log"
@@ -16108,6 +16173,9 @@ msgid ""
 "waiting list in, you could sell tickets worth an additional <strong>"
 "%(amount)s</strong>."
 msgstr ""
+"Nếu bạn có thể tạo đủ chỗ tại sự kiện của mình để đưa tất cả những người "
+"trong danh sách chờ vào, bạn có thể bán vé trị giá thêm "
+"<strong>%(amount)s</strong>."
 
 #: pretix/control/templates/pretixcontrol/waitinglist/index.html:93
 msgid "Successfully redeemed"
@@ -16115,13 +16183,15 @@ msgstr "Đổi thưởng thành công"
 
 #: pretix/control/templates/pretixcontrol/waitinglist/index.html:135
 msgid "On the list since"
-msgstr "Trên danh sách từ"
+msgstr "Trên danh sách kể từ"
 
 #: pretix/control/templates/pretixcontrol/waitinglist/index.html:158
 msgid ""
 "This entry has a modified priority. The higher this number is, the earlier "
 "this person will be assigned a voucher."
 msgstr ""
+"Mục nhập này có mức độ ưu tiên sửa đổi. Con số này càng cao, "
+"người này sẽ được giao chứng từ càng sớm."
 
 #: pretix/control/templates/pretixcontrol/waitinglist/index.html:174
 #, python-format
@@ -16627,7 +16697,7 @@ msgstr "Câu hỏi yêu cầu không tồn tại."
 
 #: pretix/control/views/item.py:439
 msgid "The selected question has been deleted."
-msgstr ""
+msgstr "Câu hỏi được chọn đã bị xóa."
 
 #: pretix/control/views/item.py:535
 msgid "File uploaded"
@@ -16635,7 +16705,7 @@ msgstr "Tập tin đã được tải lên"
 
 #: pretix/control/views/item.py:667
 msgid "The new question has been created."
-msgstr ""
+msgstr "Câu hỏi mới đã được tạo."
 
 #: pretix/control/views/item.py:744
 msgid "The new quota has been created."
@@ -16647,24 +16717,24 @@ msgstr ""
 
 #: pretix/control/views/item.py:811
 msgid "Vouchers and waiting list reservations"
-msgstr ""
+msgstr "Phiếu thưởng và đặt chỗ trong danh sách chờ"
 
 #: pretix/control/views/item.py:826
 msgid "Available quota"
-msgstr "hạn ngạch có sẵn"
+msgstr "Hạn ngạch có sẵn"
 
 #: pretix/control/views/item.py:832
 msgid "Waiting list (pending)"
-msgstr ""
+msgstr "Danh sách chờ (đang chờ xử lý)"
 
 #: pretix/control/views/item.py:839
 msgid "Currently for sale"
-msgstr ""
+msgstr "Hiện đang bán"
 
 #: pretix/control/views/item.py:893 pretix/control/views/item.py:939
 #: pretix/control/views/item.py:993
 msgid "The requested quota does not exist."
-msgstr ""
+msgstr "Hạn ngạch được yêu cầu không tồn tại."
 
 #: pretix/control/views/item.py:914
 msgid "The quota has been re-opened and will not close again."
@@ -16672,7 +16742,7 @@ msgstr "Hạn ngạch đã được mở cửa trở lại và sẽ không đón
 
 #: pretix/control/views/item.py:1007
 msgid "The selected quota has been deleted."
-msgstr ""
+msgstr "Hạn ngạch đã chọn đã bị xóa"
 
 #: pretix/control/views/item.py:1030
 msgid "The requested item does not exist."
@@ -16701,7 +16771,7 @@ msgstr ""
 
 #: pretix/control/views/item.py:1374
 msgid "The selected product has been deleted."
-msgstr ""
+msgstr "Sản phẩm được chọn đã bị xóa."
 
 #: pretix/control/views/item.py:1383
 msgid "The selected product has been deactivated."
@@ -16709,16 +16779,16 @@ msgstr "Các sản phẩm được chọn đã bị vô hiệu hoá."
 
 #: pretix/control/views/main.py:187
 msgid "You do not have permission to clone this event."
-msgstr ""
+msgstr "Bạn không có quyền sao chép sự kiện này."
 
 #: pretix/control/views/main.py:250
 #, python-brace-format
 msgid "Team {event}"
-msgstr "Đội {event}"
+msgstr "Nhóm {event}"
 
 #: pretix/control/views/oauth.py:85
 msgid "A new client secret has been generated and is now effective."
-msgstr ""
+msgstr "Mã bí mật khách hàng mới đã được tạo và hiện có hiệu lực."
 
 #: pretix/control/views/oauth.py:143
 msgid "Access for the selected application has been revoked."
@@ -16726,7 +16796,7 @@ msgstr "Truy cập cho các ứng dụng được chọn đã bị thu hồi."
 
 #: pretix/control/views/orderimport.py:33
 msgid "Please only upload CSV files."
-msgstr ""
+msgstr "Vui lòng chỉ tải lên các tệp CSV."
 
 #: pretix/control/views/orderimport.py:39
 msgid "Please do not upload files larger than 10 MB."
@@ -16734,11 +16804,11 @@ msgstr "Xin đừng upload file lớn hơn 10 MB."
 
 #: pretix/control/views/orderimport.py:96
 msgid "The import was successful."
-msgstr "Việc nhập khẩu đã thành công."
+msgstr "Import thành công."
 
 #: pretix/control/views/orderimport.py:106
 msgid "We've been unable to parse the uploaded file as a CSV file."
-msgstr ""
+msgstr "Chúng tôi không thể phân tích cú pháp tệp đã tải lên thành tệp CSV."
 
 #: pretix/control/views/orders.py:377 pretix/presale/views/order.py:121
 #: pretix/presale/views/order.py:165 pretix/presale/views/order.py:265
@@ -17153,24 +17223,24 @@ msgstr "Lời mời đã được gửi lại."
 
 #: pretix/control/views/organizer.py:619
 msgid "Invalid token selected."
-msgstr ""
+msgstr "Đã chọn token không hợp lệ."
 
 #: pretix/control/views/organizer.py:629
 msgid "The token has been revoked."
-msgstr ""
+msgstr "Token đã bị thu hồi."
 
 #: pretix/control/views/organizer.py:641
 msgid "Users need to have a pretix account before they can be invited."
 msgstr ""
-"Người dùng cần phải có một tài khoản pretix trước khi chúng có thể được mời."
+"Người dùng cần phải có một tài khoản Nextix.cloud trước khi được mời."
 
 #: pretix/control/views/organizer.py:651
 msgid "The new member has been invited to the team."
-msgstr ""
+msgstr "Thành viên mới đã được mời vào nhóm."
 
 #: pretix/control/views/organizer.py:666
 msgid "The new member has been added to the team."
-msgstr ""
+msgstr "Thành viên mới đã được thêm vào nhóm."
 
 #: pretix/control/views/organizer.py:677
 msgid ""
@@ -17178,6 +17248,9 @@ msgid ""
 "Please copy this secret to a safe place. You will not be able to view it "
 "again here."
 msgstr ""
+"API token mới đã được tạo với mã bí mật sau: {}\n"
+"Vui lòng sao chép bí mật này vào một nơi an toàn. Bạn sẽ không thể "
+"xem lại nó ở đây."
 
 #: pretix/control/views/organizer.py:812
 msgid "This device has been set up successfully."
@@ -17185,52 +17258,52 @@ msgstr "Thiết bị này đã được thiết lập thành công."
 
 #: pretix/control/views/organizer.py:840
 msgid "This device currently does not have access."
-msgstr ""
+msgstr "Thiết bị này hiện không có quyền truy cập."
 
 #: pretix/control/views/organizer.py:851
 msgid "Access for this device has been revoked."
-msgstr ""
+msgstr "Quyền truy cập cho thiết bị này đã bị thu hồi."
 
 #: pretix/control/views/organizer.py:997
 msgid "The selected gift card issuer has been added."
-msgstr "Được lựa chọn Đơn vị phát hành thẻ quà tặng đã được thêm vào."
+msgstr "Nhà phát hành thẻ quà tặng đã chọn đã được thêm vào.j:"
 
 #: pretix/control/views/organizer.py:1011
 msgid "The selected gift card issuer has been removed."
-msgstr ""
+msgstr "Nhà phát hành thẻ quà tặng đã chọn đã bị xóa."
 
 #: pretix/control/views/organizer.py:1044
 #: pretix/control/views/organizer.py:1077
 msgid "Gift cards are not allowed to have negative values."
-msgstr ""
+msgstr "Thẻ quà tặng không được phép có giá trị âm."
 
 #: pretix/control/views/organizer.py:1067
 msgid "The transaction could not be reversed."
-msgstr ""
+msgstr "Không thể hoàn nguyên giao dịch."
 
 #: pretix/control/views/organizer.py:1069
 msgid "The transaction has been reversed."
-msgstr ""
+msgstr "Giao dịch đã được hoàn lại."
 
 #: pretix/control/views/organizer.py:1074
 msgid "Your input was invalid, please try again."
-msgstr ""
+msgstr "Đầu vào của bạn không hợp lệ, vui lòng thử lại."
 
 #: pretix/control/views/organizer.py:1091
 msgid "The manual transaction has been saved."
-msgstr ""
+msgstr "Giao dịch thủ công đã được lưu."
 
 #: pretix/control/views/organizer.py:1123
 msgid "The gift card has been created and can now be used."
-msgstr ""
+msgstr "Thẻ quà tặng đã được tạo và hiện có thể được sử dụng."
 
 #: pretix/control/views/organizer.py:1366
 msgid "The selected gate has been deleted."
-msgstr ""
+msgstr "Cổng được chọn đã bị xóa."
 
 #: pretix/control/views/pdf.py:53
 msgid "The uploaded PDF file is too large."
-msgstr ""
+msgstr "Tệp PDF đã tải lên quá lớn."
 
 #: pretix/control/views/pdf.py:55
 msgid "The uploaded PDF file is too small."
@@ -17238,7 +17311,7 @@ msgstr "Các tập tin PDF được tải lên là quá nhỏ."
 
 #: pretix/control/views/pdf.py:57
 msgid "Please only upload PDF files."
-msgstr ""
+msgstr "Vui lòng chỉ tải lên các tệp PDF."
 
 #: pretix/control/views/shredder.py:93
 msgid "The selected data was deleted successfully."
@@ -17255,22 +17328,16 @@ msgid "A date can not be deleted if orders already have been placed."
 msgstr ""
 
 #: pretix/control/views/subevents.py:136
-#, fuzzy
-#| msgid "The selected date has been deleted."
 msgctxt "subevent"
 msgid "The selected date has been deleted."
 msgstr "Các ngày đã chọn đã bị xóa."
 
 #: pretix/control/views/subevents.py:482
-#, fuzzy
-#| msgid "The new date has been created."
 msgctxt "subevent"
 msgid "The new date has been created."
 msgstr "Ngày mới đã được tạo."
 
 #: pretix/control/views/subevents.py:550
-#, fuzzy
-#| msgid "The selected dates have been disabled."
 msgctxt "subevent"
 msgid "The selected dates have been disabled."
 msgstr "Những ngày đã chọn đã bị vô hiệu hóa."
@@ -17281,8 +17348,6 @@ msgid "The selected dates have been enabled."
 msgstr ""
 
 #: pretix/control/views/subevents.py:581
-#, fuzzy
-#| msgid "The selected dates have been deleted or disabled."
 msgctxt "subevent"
 msgid "The selected dates have been deleted or disabled."
 msgstr "Những ngày đã chọn đã bị xóa hoặc bị vô hiệu hóa."
@@ -17547,15 +17612,12 @@ msgstr ""
 
 #: pretix/plugins/badges/exporters.py:200
 msgid "Attendee badges"
-msgstr "phù hiệu người tham dự"
+msgstr "Phù hiệu người tham dự"
 
 #: pretix/plugins/badges/exporters.py:220
 #: pretix/plugins/ticketoutputpdf/exporters.py:32
-#, fuzzy
-#| msgctxt "pretix/base/models/checkin.py:20"
-#| msgid "Include pending orders"
 msgid "Include pending orders"
-msgstr "Bao gồm lệnh chờ"
+msgstr "Bao gồm các đơn đặt hàng đang chờ xử lý"
 
 #: pretix/plugins/badges/exporters.py:225
 msgid "Include add-on or bundled positions"
@@ -17563,7 +17625,7 @@ msgstr "Bao gồm add-on hoặc vị trí kèm"
 
 #: pretix/plugins/badges/exporters.py:230
 msgid "Rendering option"
-msgstr "tùy chọn render"
+msgstr "Tùy chọn render"
 
 #: pretix/plugins/badges/exporters.py:235
 msgid ""
@@ -17630,7 +17692,7 @@ msgstr ""
 #: pretix/plugins/badges/templates/pretixplugins/badges/edit.html:13
 #, python-format
 msgid "Badge layout: %(name)s"
-msgstr "Badge bố trí: %(name)s"
+msgstr "Mẫu phù hiệu: %(name)s"
 
 #: pretix/plugins/badges/templates/pretixplugins/badges/edit.html:23
 msgid "Badge design"
@@ -17846,8 +17908,7 @@ msgid "Export refunds"
 msgstr "hoàn lại tiền xuất khẩu"
 
 #: pretix/plugins/banktransfer/tasks.py:32
-#, fuzzy, python-format
-#| msgid "Your order received an incomplete payment: %(code)s"
+#, python-format
 msgid "Your order received an incomplete payment: %(code)s"
 msgstr ""
 "Đơn đặt hàng của bạn đã nhận được một khoản thanh toán chưa hoàn tất: "
@@ -17883,29 +17944,19 @@ msgid "Account"
 msgstr ""
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/control.html:22
-#, fuzzy
-#| msgid "Total amount"
 msgid "Transfer amount"
-msgstr "Tổng cộng"
+msgstr "Khối lượng chuyển"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/control.html:26
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/import_assign.html:33
 msgid "Reference"
-msgstr ""
+msgstr "Tham chiếu"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/control.html:32
 msgid "Reference code"
 msgstr "Mã tham chiếu"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/email/order_pending.txt:1
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "Please transfer the full amount to the following bank account.\n"
-#| "\n"
-#| "    Reference: %(code)s\n"
-#| "    Amount: %(total)s\n"
-#| " %(bank)s\n"
 msgid ""
 "\n"
 "Please transfer the full amount to the following bank account.\n"
@@ -17940,8 +17991,7 @@ msgstr ""
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/import_base.html:11
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/import_base_organizer.html:11
-#, fuzzy, python-format
-#| msgid "Last import: %(date)s"
+#, python-format
 msgid "Last import: %(date)s"
 msgstr "Nhập lần cuối: %(date)s"
 
@@ -18162,10 +18212,7 @@ msgid "Export SEPA xml"
 msgstr ""
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/sepa_export.html:13
-#, fuzzy, python-format
-#| msgid ""
-#| "You are trying to download a refund export from %(date)s with one order "
-#| "and a total of %(sum)s."
+#, python-format
 msgid ""
 "You are trying to download a refund export from %(date)s with one order and "
 "a total of %(sum)s."
@@ -18173,44 +18220,44 @@ msgid_plural ""
 "You are trying to download a refund export from %(date)s with %(cnt)s order "
 "and a total of %(sum)s."
 msgstr[0] ""
-"Bạn đang cố tải xuống bản xuất tiền hoàn lại từ %(date)s với một đơn đặt "
-"hàng vàtổng số %(sum)s."
+"Bạn đang cố tải xuống báo cáo hoàn tiền từ %(date)s với một đơn đặt "
+"hàng có tổng tiền %(sum)s."
 msgstr[1] ""
-"Bạn đang cố tải xuống bản xuất tiền hoàn lại từ %(date)s với đơn đặt hàng "
-"%(cnt)svà tổng số %(sum)s."
+"Bạn đang cố tải xuống báo cáo hoàn tiền từ %(date)s với %(cnt)s đơn đặt hàng "
+"có tổng tiền %(sum)s."
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/sepa_export.html:23
 msgid ""
 "Please state from which bank account the refunds should be transferred from."
-msgstr ""
+msgstr "Vui lòng nêu rõ khoản tiền hoàn lại sẽ được chuyển từ tài khoản ngân hàng nào."
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/sepa_export.html:35
 msgid "Download"
-msgstr ""
+msgstr "Tải về"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:12
 msgid "Payer and reference"
-msgstr "Nộp và tài liệu tham khảo"
+msgstr "Người thanh toán và tham chiếu"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:14
 msgid "Result"
-msgstr ""
+msgstr "Kết quả"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:25
 msgid "Accept anyway"
-msgstr ""
+msgstr "Vẫn chấp nhận"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:29
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:42
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:53
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:70
 msgid "Discard"
-msgstr ""
+msgstr "Bỏ đi"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:37
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:61
 msgid "Assign to order"
-msgstr ""
+msgstr "Chỉ định đơn hàng"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:49
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:66
@@ -18219,7 +18266,7 @@ msgstr "Thử lại"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:101
 msgid "Comment:"
-msgstr ""
+msgstr "Bình luận:"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:113
 msgid "No order code detected"
@@ -18227,7 +18274,7 @@ msgstr "Không có mã đơn hàng nào được phát hiện"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:115
 msgid "Invalid for this order"
-msgstr "Invalid for this order"
+msgstr "Không hợp lệ cho đơn đặt hàng này"
 
 #: pretix/plugins/banktransfer/templates/pretixplugins/banktransfer/transaction_list.html:117
 msgid "Error while processing"
@@ -18249,31 +18296,31 @@ msgstr ""
 
 #: pretix/plugins/banktransfer/views.py:126
 msgid "Problem sending email."
-msgstr ""
+msgstr "Sự cố khi gửi email."
 
 #: pretix/plugins/banktransfer/views.py:147
 msgid "Unknown order code"
-msgstr ""
+msgstr "Mã đơn hàng không xác định"
 
 #: pretix/plugins/banktransfer/views.py:296
 msgid "Search text"
-msgstr ""
+msgstr "Nội dung tìm kiếm"
 
 #: pretix/plugins/banktransfer/views.py:297
 msgid "min"
-msgstr ""
+msgstr "nhỏ nhất"
 
 #: pretix/plugins/banktransfer/views.py:298
 msgid "max"
-msgstr ""
+msgstr "lớn nhất"
 
 #: pretix/plugins/banktransfer/views.py:307
 msgid "Filter form is not valid."
-msgstr ""
+msgstr "Bộ lọc không hợp lệ."
 
 #: pretix/plugins/banktransfer/views.py:350
 msgid "All unresolved transactions have been discarded."
-msgstr ""
+msgstr "Tất cả các giao dịch chưa được giải quyết đã bị loại bỏ."
 
 #: pretix/plugins/banktransfer/views.py:369
 msgid "You must choose a file to import."
@@ -18290,23 +18337,27 @@ msgstr ""
 #: pretix/plugins/banktransfer/views.py:386
 #: pretix/plugins/banktransfer/views.py:430
 msgid "We were unable to process your input."
-msgstr ""
+msgstr "Chúng tôi không thể xử lý đầu vào của bạn."
 
 #: pretix/plugins/banktransfer/views.py:395
 msgid ""
 "I'm sorry, but we were unable to import this CSV file. Please contact "
 "support for help."
 msgstr ""
+"Xin lỗi, chúng tôi phát hiện tệp này trống. Vui lòng liên hệ với "
+"bộ phận hỗ trợ để được trợ giúp."
 
 #: pretix/plugins/banktransfer/views.py:400
 msgid ""
 "I'm sorry, but we detected this file as empty. Please contact support for "
 "help."
 msgstr ""
+"Xin lỗi, chúng tôi phát hiện tệp này trống. Vui lòng liên hệ với "
+"bộ phận hỗ trợ để được trợ giúp."
 
 #: pretix/plugins/banktransfer/views.py:420
 msgid "Invalid input data."
-msgstr ""
+msgstr "Dữ liệu đầu vào không hợp lệ."
 
 #: pretix/plugins/banktransfer/views.py:424
 msgid "You need to select the column containing the payment reference."
@@ -18317,6 +18368,8 @@ msgid ""
 "Please perform per-event bank imports as this organizer has events with "
 "multiple currencies."
 msgstr ""
+"Vui lòng thực hiện import ngân hàng cho mỗi sự kiện vì đơn vị này "
+"có các sự kiện với nhiều đơn vị tiền tệ."
 
 #: pretix/plugins/banktransfer/views.py:636
 #, python-brace-format
@@ -18327,7 +18380,7 @@ msgstr ""
 
 #: pretix/plugins/banktransfer/views.py:666
 msgid "No valid orders have been found."
-msgstr ""
+msgstr "Không có đơn đặt hàng hợp lệ đã được tìm thấy."
 
 #: pretix/plugins/banktransfer/views.py:699
 msgid ""
@@ -18337,19 +18390,19 @@ msgstr ""
 
 #: pretix/plugins/checkinlists/__init__.py:13
 msgid "Check-in list exporter"
-msgstr ""
+msgstr "Bộ xuất danh sách check-in"
 
 #: pretix/plugins/checkinlists/__init__.py:17
 msgid "This plugin allows you to generate check-in lists for your conference."
-msgstr ""
+msgstr "Plugin này cho phép bạn tạo danh sách đăng ký cho hội nghị của mình."
 
 #: pretix/plugins/checkinlists/exporters.py:50
 msgid "Only include tickets for dates on or after this date."
-msgstr ""
+msgstr "Chỉ bao gồm vé cho những ngày trong hoặc sau ngày này."
 
 #: pretix/plugins/checkinlists/exporters.py:57
 msgid "Only include tickets for dates on or before this date."
-msgstr ""
+msgstr "Chỉ bao gồm vé cho những ngày trong hoặc trước ngày này."
 
 #: pretix/plugins/checkinlists/exporters.py:61
 msgid "Include QR-code secret"
@@ -18357,11 +18410,11 @@ msgstr "Bao gồm QR-mã bí mật"
 
 #: pretix/plugins/checkinlists/exporters.py:66
 msgid "Only tickets requiring special attention"
-msgstr ""
+msgstr "Chỉ những vé cần chú ý đặc biệt"
 
 #: pretix/plugins/checkinlists/exporters.py:86
 msgid "Include questions"
-msgstr ""
+msgstr "Bao gồm các câu hỏi"
 
 #: pretix/plugins/checkinlists/exporters.py:231
 msgid "Check-in list (PDF)"
@@ -18371,16 +18424,16 @@ msgstr ""
 #: pretix/plugins/checkinlists/exporters.py:293
 msgctxt "tablehead"
 msgid "paid"
-msgstr ""
+msgstr "đã thanh toán"
 
 #: pretix/plugins/checkinlists/exporters.py:405
 msgid "Checked out"
-msgstr "kiểm tra ra"
+msgstr "Đã ra"
 
 #: pretix/plugins/checkinlists/exporters.py:405
 #: pretix/plugins/checkinlists/exporters.py:577
 msgid "Automatically checked in"
-msgstr ""
+msgstr "Tự động check-in"
 
 #: pretix/plugins/checkinlists/exporters.py:414
 #: pretix/plugins/checkinlists/exporters.py:572
@@ -18402,11 +18455,11 @@ msgstr "thiết bị"
 
 #: pretix/plugins/checkinlists/exporters.py:576
 msgid "Offline override"
-msgstr "Ghi đè ẩn"
+msgstr "Ghi đè ngoại tuyến"
 
 #: pretix/plugins/checkinlists/exporters.py:651
 msgid "All check-in lists"
-msgstr "Tất cả các check-in danh sách"
+msgstr "Tất cả các danh sách check-in"
 
 #: pretix/plugins/manualpayment/__init__.py:16
 msgid "This plugin adds a customizable payment method for manual processing."
@@ -18589,40 +18642,34 @@ msgid ""
 msgstr ""
 
 #: pretix/plugins/paypal/templates/pretixplugins/paypal/action_overpaid.html:5
-#, fuzzy, python-format
-#| msgid ""
-#| "The PayPal transaction %(payment)s has succeeded, but the order %(order)s "
-#| "is expired and the product was sold out in the meantime. Therefore, the "
-#| "payment could not be accepted. Please contact the user and refund the "
-#| "money via PayPal's interface."
+#, python-format
 msgid ""
 "The PayPal transaction %(payment)s has succeeded, but the order %(order)s is "
 "expired and the product was sold out in the meantime. Therefore, the payment "
 "could not be accepted. Please contact the user and refund the money via "
 "PayPal's interface."
 msgstr ""
-"Giao dịch PayPal %(payment)s đã thành công, nhưng đơn đặt hàng %(order)s "
-"làhết hạn và sản phẩm đã được bán hết trong thời gian chờ đợi. Do đó, khoản "
-"thanh toánkhông thể được chấp nhận. Vui lòng liên hệ với người dùng và hoàn "
-"lại tiền quagiao diện của PayPal."
+"Giao dịch PayPal %(payment)s đã thành công, nhưng đơn hàng %(order)s "
+"đã hết hạn và sản phẩm đã được bán hết trong thời gian chờ đợi. Do đó, "
+"không thể chấp nhận thanh toán. Vui lòng liên hệ với người dùng và hoàn lại "
+"tiền qua Giao diện của PayPal. "
 
 #: pretix/plugins/paypal/templates/pretixplugins/paypal/action_refund.html:5
-#, fuzzy, python-format
-#| msgid ""
-#| "PayPal reported that the payment %(payment)s has been refunded or "
-#| "reversed. Do you want to mark the matching order ( %(order)s) as refunded?"
+#, python-format
 msgid ""
 "PayPal reported that the payment %(payment)s has been refunded or reversed. "
 "Do you want to mark the matching order (%(order)s) as refunded?"
 msgstr ""
-"PayPal đã báo cáo rằng việc thanh toán %(payment)s đã được hoàn hoặc đảo "
-"ngược. Bạn có muốn đánh dấu các đơn hàng (%(order)s) đã được hoàn?"
+"PayPal báo cáo rằng %(payment)s đã được hoàn lại hoặc đảo ngược. Bạn "
+"có muốn đánh dấu khớp là đơn hàng (%(order)s) đã được hoàn lại tiền không?"
 
 #: pretix/plugins/paypal/templates/pretixplugins/paypal/checkout_payment_confirm.html:3
 msgid ""
 "The total amount listed above will be withdrawn from your PayPal account "
 "after the confirmation of your purchase."
 msgstr ""
+"Tổng số tiền được liệt kê ở trên sẽ được rút khỏi tài khoản PayPal "
+"của bạn sau khi xác nhận mua hàng của bạn."
 
 #: pretix/plugins/paypal/templates/pretixplugins/paypal/checkout_payment_form.html:3
 msgid ""
@@ -18633,7 +18680,7 @@ msgstr ""
 
 #: pretix/plugins/paypal/templates/pretixplugins/paypal/control.html:7
 msgid "Sale ID"
-msgstr "bán ID"
+msgstr "ID bán hàng"
 
 #: pretix/plugins/paypal/templates/pretixplugins/paypal/control.html:11
 msgid "Last update"
@@ -18642,7 +18689,7 @@ msgstr "Cập nhật cuối cùng"
 #: pretix/plugins/paypal/templates/pretixplugins/paypal/control.html:13
 #: pretix/plugins/stripe/templates/pretixplugins/stripe/control.html:53
 msgid "Total value"
-msgstr ""
+msgstr "Tổng"
 
 #: pretix/plugins/paypal/templates/pretixplugins/paypal/pending.html:4
 msgid ""
@@ -18812,6 +18859,8 @@ msgid ""
 "This plugin allows to link to payments and redirect back afterwards. This is "
 "useful in combination with our API."
 msgstr ""
+"Plugin này cho phép liên kết với các khoản thanh toán và chuyển hướng trở lại "
+"sau đó. Điều này rất hữu ích khi kết hợp với API của chúng tôi."
 
 #: pretix/plugins/returnurl/signals.py:44
 msgid "Redirection"
@@ -19149,9 +19198,6 @@ msgid "Stripe account"
 msgstr ""
 
 #: pretix/plugins/stripe/payment.py:139
-#, fuzzy
-#| msgctxt "pretix/control/forms/filter.py:876"
-#| msgid "Live"
 msgctxt "stripe"
 msgid "Live"
 msgstr "Trực tiếp"
@@ -19483,9 +19529,6 @@ msgstr ""
 #: pretix/plugins/stripe/templates/pretixplugins/stripe/checkout_payment_form_cc.html:26
 #: pretix/plugins/stripe/templates/pretixplugins/stripe/control.html:11
 #: pretix/plugins/stripe/templates/pretixplugins/stripe/control.html:41
-#, fuzzy
-#| msgctxt "pretix/control/templates/pretixcontrol/boxoffice/payment.html:26"
-#| msgid "Card type"
 msgid "Card type"
 msgstr "Loại thẻ"
 
@@ -19635,7 +19678,7 @@ msgstr ""
 
 #: pretix/plugins/stripe/views.py:528 pretix/plugins/stripe/views.py:531
 msgid "Sorry, there was an error in the payment process."
-msgstr ""
+msgstr "Xin lỗi, đã xảy ra lỗi trong quá trình thanh toán."
 
 #: pretix/plugins/ticketoutputpdf/__init__.py:10
 #: pretix/plugins/ticketoutputpdf/__init__.py:13
@@ -19648,12 +19691,12 @@ msgstr "Plugin này cho phép bạn in vé dưới dạng tệp PDF"
 
 #: pretix/plugins/ticketoutputpdf/exporters.py:22
 msgid "All PDF tickets in one file"
-msgstr ""
+msgstr "Tất cả các vé PDF trong 1 file"
 
 #: pretix/plugins/ticketoutputpdf/forms.py:25
 #, python-brace-format
 msgid "PDF ticket layout for {channel}"
-msgstr ""
+msgstr "Mẫu vé PDF cho {channel}"
 
 #: pretix/plugins/ticketoutputpdf/forms.py:28
 msgid "(Same as above)"
@@ -19661,52 +19704,52 @@ msgstr "(Giống như trên)"
 
 #: pretix/plugins/ticketoutputpdf/forms.py:30
 msgid "PDF ticket layout"
-msgstr ""
+msgstr "Mẫu vé PDF"
 
 #: pretix/plugins/ticketoutputpdf/migrations/0002_auto_20180605_2022.py:22
 #: pretix/plugins/ticketoutputpdf/migrations/0002_auto_20180605_2022.py:38
 #: pretix/plugins/ticketoutputpdf/views.py:201
 msgid "Default layout"
-msgstr ""
+msgstr "Mẫu mặc định"
 
 #: pretix/plugins/ticketoutputpdf/signals.py:106
 msgid "Ticket layout created."
-msgstr ""
+msgstr "Mẫu vé đã được tạo."
 
 #: pretix/plugins/ticketoutputpdf/signals.py:107
 msgid "Ticket layout deleted."
-msgstr ""
+msgstr "Mẫu vé đã bị xoá."
 
 #: pretix/plugins/ticketoutputpdf/signals.py:108
 msgid "Ticket layout changed."
-msgstr "bố trí vé thay đổi."
+msgstr "Mẫu vé đã thay đổi."
 
 #: pretix/plugins/ticketoutputpdf/signals.py:121
 #, python-brace-format
 msgid "Ticket layout {val}"
-msgstr ""
+msgstr "Mẫu vé {val}"
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/delete.html:4
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/delete.html:6
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/edit.html:8
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/edit.html:15
 msgid "Ticket layout"
-msgstr ""
+msgstr "Mẫu vé"
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/delete.html:9
 #, python-format
 msgid "Are you sure you want to delete the layout <strong>%(layout)s</strong>?"
-msgstr ""
+msgstr "Bạn có chắc chắn muốn xóa mẫu <strong>%(layout)s</strong> không?"
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/edit.html:6
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/edit.html:13
 #, python-format
 msgid "Ticket layout: %(name)s"
-msgstr ""
+msgstr "Mẫu vé: %(name)s"
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/edit.html:23
 msgid "Ticket design"
-msgstr ""
+msgstr "Thiết kế vé"
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/form.html:3
 msgid ""
@@ -19716,19 +19759,24 @@ msgid ""
 "choice. The editor is easy to use thanks to its drag-and-drop user "
 "interface, but it requires a modern browser and a decent internet connection."
 msgstr ""
+"Bạn có thể tùy chỉnh thiết kế vé bằng trình chỉnh sửa vé PDF của chúng tôi. "
+"Tại đó, bạn có thể tải lên tệp PDF được sử dụng làm nền cho vé và "
+"sau đó đặt các văn bản và mã QR khác nhau trên nền ở các vị trí "
+"bạn chọn. Trình chỉnh sửa rất dễ dàng để sử dụng nhờ giao diện người dùng "
+"kéo và thả, nhưng nó yêu cầu trình duyệt hiện đại và kết nối internet tốt. "
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/form.html:14
 msgid "Open Layout Designer"
-msgstr ""
+msgstr "Mở trình thiết kế mẫu vé"
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/form.html:18
 msgid "Advanced mode (multiple layouts)"
-msgstr ""
+msgstr "Chế độ nâng cao (nhiều mẫu vé)"
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/index.html:4
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/index.html:6
 msgid "Ticket layouts"
-msgstr ""
+msgstr "Mẫu vé"
 
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/index.html:10
 msgid "You haven't created any layouts yet."
@@ -19737,15 +19785,15 @@ msgstr "Bạn chưa tạo bất cứ bố trí được nêu ra."
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/index.html:17
 #: pretix/plugins/ticketoutputpdf/templates/pretixplugins/ticketoutputpdf/index.html:24
 msgid "Create a new layout"
-msgstr ""
+msgstr "Tạo mới một mẫu"
 
 #: pretix/plugins/ticketoutputpdf/ticketoutput.py:29
 msgid "PDF output"
-msgstr "đầu ra PDF"
+msgstr ""
 
 #: pretix/plugins/ticketoutputpdf/ticketoutput.py:31
 msgid "Download tickets (PDF)"
-msgstr "Tải xuống vé (PDF)"
+msgstr "Tải vé (PDF)"
 
 #: pretix/plugins/ticketoutputpdf/ticketoutput.py:32
 msgid "Download ticket (PDF)"
@@ -19757,21 +19805,21 @@ msgstr "Bố cục vé mặc định"
 
 #: pretix/plugins/ticketoutputpdf/views.py:93
 msgid "The new ticket layout has been created."
-msgstr "Cách bố trí vé mới đã được tạo."
+msgstr "Mẫu vé mới đã được tạo."
 
 #: pretix/plugins/ticketoutputpdf/views.py:142
 #: pretix/plugins/ticketoutputpdf/views.py:172
 #: pretix/plugins/ticketoutputpdf/views.py:220
 msgid "The requested layout does not exist."
-msgstr "Cách bố trí được yêu cầu không tồn tại."
+msgstr "Mẫu vé được yêu cầu không tồn tại."
 
 #: pretix/plugins/ticketoutputpdf/views.py:184
 msgid "The selected ticket layout been deleted."
-msgstr "The selected ticket layout been deleted."
+msgstr "Mẫu vé đã bị xoá."
 
 #: pretix/plugins/ticketoutputpdf/views.py:224
 msgid "Ticket PDF layout: {}"
-msgstr "Bố trí vé PDF: {}"
+msgstr "Mẫu vé PDF: {}"
 
 #: pretix/presale/checkoutflow.py:63
 msgctxt "checkoutflow"
@@ -19896,8 +19944,7 @@ msgid "Admission: {datetime}"
 msgstr "Giá vé: {datetime}"
 
 #: pretix/presale/ical.py:61
-#, fuzzy, python-brace-format
-#| msgid "Organizer: {organizer}"
+#, python-brace-format
 msgid "Organizer: {organizer}"
 msgstr "Đơn vị: {organizer}"
 
@@ -19959,18 +20006,16 @@ msgid "We're now trying to book these add-ons for you!"
 msgstr ""
 
 #: pretix/presale/templates/pretixpresale/event/checkout_addons.html:46
-#, fuzzy, python-format
-#| msgid "You need to choose exactly one option from this category."
+#, python-format
 msgid "You need to choose exactly one option from this category."
 msgid_plural "You need to choose %(min_count)s options from this category."
 msgstr[0] "Bạn cần chọn chính xác một tùy chọn từ danh mục này."
 msgstr[1] "Bạn cần chọn các tùy chọn %(min_count)s từ danh mục này."
 
 #: pretix/presale/templates/pretixpresale/event/checkout_addons.html:53
-#, fuzzy, python-format
-#| msgid "You can choose up to %(max_count)s options from this category."
+#, python-format
 msgid "You can choose up to %(max_count)s options from this category."
-msgstr "Bạn có thể chọn lên đến %(max_count)s tùy chọn từ hạng mục này."
+msgstr "Bạn có thể chọn lên đến %(max_count)s tùy chọn từ danh mục này."
 
 #: pretix/presale/templates/pretixpresale/event/checkout_addons.html:57
 #, python-format
@@ -19978,6 +20023,8 @@ msgid ""
 "You can choose between %(min_count)s and %(max_count)s options from this "
 "category."
 msgstr ""
+"Bạn có thể chọn giữa các tùy chọn %(min_count)s và %(max_count)s "
+"từ danh mục này."
 
 #: pretix/presale/templates/pretixpresale/event/checkout_addons.html:91
 #: pretix/presale/templates/pretixpresale/event/checkout_addons.html:242
@@ -20004,8 +20051,7 @@ msgstr "Hiện biến thể"
 #: pretix/presale/templates/pretixpresale/event/fragment_product_list.html:225
 #: pretix/presale/templates/pretixpresale/event/voucher.html:161
 #: pretix/presale/templates/pretixpresale/event/voucher.html:267
-#, fuzzy, python-format
-#| msgid "Modify price for %(item)s"
+#, python-format
 msgid "Modify price for %(item)s"
 msgstr "Sửa giá cho %(item)s"
 
@@ -20016,7 +20062,7 @@ msgstr "Sửa giá cho %(item)s"
 #: pretix/presale/templates/pretixpresale/event/voucher.html:179
 #: pretix/presale/templates/pretixpresale/event/voucher.html:285
 msgid "incl. taxes"
-msgstr ""
+msgstr "bao gồm thuế"
 
 #: pretix/presale/templates/pretixpresale/event/checkout_addons.html:177
 #: pretix/presale/templates/pretixpresale/event/checkout_addons.html:286
@@ -20024,8 +20070,7 @@ msgstr ""
 #: pretix/presale/templates/pretixpresale/event/fragment_product_list.html:246
 #: pretix/presale/templates/pretixpresale/event/voucher.html:182
 #: pretix/presale/templates/pretixpresale/event/voucher.html:288
-#, fuzzy, python-format
-#| msgid "<strong>plus</strong> %(rate)s%% %(name)s"
+#, python-format
 msgid "<strong>plus</strong> %(rate)s%% %(name)s"
 msgstr "<strong>cộng</strong> %(rate)s%% %(name)s"
 
@@ -20037,14 +20082,13 @@ msgstr "<strong>cộng</strong> %(rate)s%% %(name)s"
 #: pretix/presale/templates/pretixpresale/event/voucher.html:292
 #, python-format
 msgid "incl. %(rate)s%% %(name)s"
-msgstr ""
+msgstr "bao gồm %(rate)s%% %(name)s"
 
 #: pretix/presale/templates/pretixpresale/event/checkout_addons.html:196
 #: pretix/presale/templates/pretixpresale/event/fragment_product_list.html:155
 #: pretix/presale/templates/pretixpresale/event/voucher.html:201
 #: pretix/presale/templates/pretixpresale/event/voucher.html:210
-#, fuzzy, python-format
-#| msgid "Amount of %(item)s – %(var)s to order"
+#, python-format
 msgid "Amount of %(item)s – %(var)s to order"
 msgstr "Số lượng %(item)s - %(var)s cần đặt hàng"
 
@@ -20052,8 +20096,7 @@ msgstr "Số lượng %(item)s - %(var)s cần đặt hàng"
 #: pretix/presale/templates/pretixpresale/event/fragment_product_list.html:276
 #: pretix/presale/templates/pretixpresale/event/voucher.html:307
 #: pretix/presale/templates/pretixpresale/event/voucher.html:316
-#, fuzzy, python-format
-#| msgid "Amount of %(item)s to order"
+#, python-format
 msgid "Amount of %(item)s to order"
 msgstr "Số lượng %(item)s để đặt hàng"
 
@@ -20088,8 +20131,7 @@ msgstr "Giỏ hàng đã hết hạn"
 #: pretix/presale/templates/pretixpresale/event/checkout_base.html:30
 #: pretix/presale/templates/pretixpresale/event/checkout_confirm.html:42
 #: pretix/presale/templates/pretixpresale/event/index.html:53
-#, fuzzy, python-format
-#| msgid "The items in your cart are reserved for you for %(minutes)s minutes."
+#, python-format
 msgid "The items in your cart are reserved for you for %(minutes)s minutes."
 msgstr "Vé trong giỏ hàng được giữ chỗ trong %(minutes)s phút."
 
@@ -20106,9 +20148,6 @@ msgstr "Thêm vé cho một ngày khác"
 
 #: pretix/presale/templates/pretixpresale/event/checkout_confirm.html:6
 #: pretix/presale/templates/pretixpresale/event/checkout_confirm.html:8
-#, fuzzy
-#| msgctxt "pretix/presale/checkoutflow.py:786"
-#| msgid "Review order"
 msgid "Review order"
 msgstr "Xem lại đơn đặt hàng"
 
@@ -20603,7 +20642,7 @@ msgstr ""
 
 #: pretix/presale/templates/pretixpresale/event/order.html:30
 msgid "Your order has been processed successfully! See below for details."
-msgstr ""
+msgstr "Đơn đặt hàng của bạn đã được xử lý thành công! Xem chi tiết bên dưới."
 
 #: pretix/presale/templates/pretixpresale/event/order.html:32
 msgid "We successfully received your payment. See below for details."
@@ -20711,9 +20750,6 @@ msgid "Request invoice"
 msgstr "Yêu cầu hoá đơn"
 
 #: pretix/presale/templates/pretixpresale/event/order.html:274
-#, fuzzy
-#| msgctxt "checkoutflow"
-#| msgid "Your information"
 msgid "Your information"
 msgstr "Thông tin của bạn"
 
@@ -20806,8 +20842,7 @@ msgid "You can cancel this order using the following button."
 msgstr "Bạn có thể hủy lệnh này bằng cách sử dụng nút sau."
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:11
-#, fuzzy, python-format
-#| msgid "Request cancellation: %(code)s"
+#, python-format
 msgid "Request cancellation: %(code)s"
 msgstr "Yêu cầu hủy: %(code)s"
 
@@ -20830,10 +20865,7 @@ msgid ""
 msgstr ""
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:43
-#, fuzzy, python-format
-#| msgid ""
-#| "If you want, you can request a refund for the full amount minus a "
-#| "cancellation fee of %(fee)s."
+#, python-format
 msgid ""
 "If you want, you can request a refund for the full amount minus a "
 "cancellation fee of %(fee)s."
@@ -20847,21 +20879,21 @@ msgstr "Nếu bạn muốn, bạn có thể yêu cầu hoàn trả đầy đủ.
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:71
 msgid "Enter custom amount"
-msgstr ""
+msgstr "Nhập số tiền tùy chỉnh"
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:75
 msgid "Refund amount:"
-msgstr ""
+msgstr "Số tiền hoàn trả:"
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:86
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:107
 #, python-format
 msgid "Your gift card will be valid until %(expiry_date)s."
-msgstr ""
+msgstr "Thẻ quà tặng của bạn sẽ có giá trị cho đến %(expiry_date)s."
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:95
 msgid "I want the refund as a gift card for later purchases"
-msgstr ""
+msgstr "Tôi muốn tiền hoàn lại dưới dạng thẻ quà tặng cho những lần mua sau"
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:101
 msgid "I want the refund to be sent to my original payment method"
@@ -20875,6 +20907,9 @@ msgid ""
 "method. Depending on the payment method, please allow for up to two weeks "
 "before this appears on your statement."
 msgstr ""
+"Số tiền hoàn lại sẽ tự động được gửi trở lại phương thức thanh toán ban đầu "
+"của bạn. Tùy thuộc vào phương thức thanh toán, vui lòng đợi tối đa "
+"hai tuần trước khi số tiền này xuất hiện trên bảng sao kê của bạn."
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:124
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:145
@@ -20891,12 +20926,12 @@ msgstr ""
 
 #: pretix/presale/templates/pretixpresale/event/order_cancel.html:167
 msgid "Yes, request cancellation"
-msgstr ""
+msgstr "Có, yêu cầu hủy"
 
 #: pretix/presale/templates/pretixpresale/event/order_change.html:5
 #: pretix/presale/templates/pretixpresale/event/order_modify.html:5
 msgid "Modify order"
-msgstr ""
+msgstr "Chỉnh sửa đơn hàng"
 
 #: pretix/presale/templates/pretixpresale/event/order_change.html:74
 #: pretix/presale/templates/pretixpresale/event/order_modify.html:87
@@ -20906,7 +20941,7 @@ msgstr "Lưu thay đổi"
 #: pretix/presale/templates/pretixpresale/event/order_modify.html:8
 #, python-format
 msgid "Modify order: %(code)s"
-msgstr ""
+msgstr "Chỉnh sửa đơn hàng: %(code)s"
 
 #: pretix/presale/templates/pretixpresale/event/order_modify.html:18
 msgid ""
@@ -20918,7 +20953,7 @@ msgstr ""
 #: pretix/presale/templates/pretixpresale/event/order_pay_confirm.html:8
 #, python-format
 msgid "Pay order: %(code)s"
-msgstr ""
+msgstr "Thanh toán đơn hàng: %(code)s"
 
 #: pretix/presale/templates/pretixpresale/event/order_pay_change.html:5
 msgid "Change payment method"
@@ -20927,7 +20962,7 @@ msgstr "Thay đổi phương pháp thanh toán"
 #: pretix/presale/templates/pretixpresale/event/order_pay_change.html:8
 #, python-format
 msgid "Choose payment method: %(code)s"
-msgstr ""
+msgstr "Chọn phương thức thanh toán: %(code)s"
 
 #: pretix/presale/templates/pretixpresale/event/order_pay_change.html:13
 msgid ""
@@ -21301,7 +21336,7 @@ msgid ""
 "order codes."
 msgstr ""
 "Nếu có bất kỳ đơn đặt hàng nào của người dùng này, họ sẽ nhận được email kèm "
-"theomã đơn hàng."
+"theo mã đơn hàng."
 
 #: pretix/presale/views/waiting.py:77
 msgid "Waiting lists are disabled for this event."
@@ -21332,11 +21367,9 @@ msgstr ""
 "vé được sẵn một lần nữa."
 
 #: pretix/presale/views/widget.py:264
-#, fuzzy
-#| msgid "event ticketing powered by pretix"
 msgctxt "widget"
 msgid "event ticketing powered by pretix"
-msgstr "sự kiện bán vé cung cấp bởi pretix"
+msgstr "sự kiện bán vé cung cấp bởi nextix"
 
 #: pretix/presale/views/widget.py:279
 msgid "This ticket shop is currently disabled."
@@ -21368,10 +21401,8 @@ msgid "French"
 msgstr ""
 
 #: pretix/settings.py:446
-#, fuzzy
-#| msgid "Seat name"
 msgid "Vietnamese"
-msgstr "Tên ghế"
+msgstr "Tiếng Việt"
 
 #: pretix/settings.py:739
 msgid "User profile only"
