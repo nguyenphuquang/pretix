@@ -403,7 +403,7 @@ msgstr "Combined Excel (.xlsx)"
 
 #: pretix/base/exporters/answers.py:18
 msgid "Answers to file upload questions"
-msgstr "Câu trả lời cho câu hỏi tập tin tải lên"
+msgstr "Tải lên tập tin câu trả lời cho các câu hỏi"
 
 #: pretix/base/exporters/answers.py:27 pretix/base/models/items.py:1104
 #: pretix/control/navigation.py:161
@@ -918,7 +918,7 @@ msgstr "Bao gồm các khoản thanh toán"
 #: pretix/base/exporters/waitinglist.py:88 pretix/control/forms/event.py:1273
 #: pretix/control/forms/organizer.py:47
 msgid "Event slug"
-msgstr ""
+msgstr "Slug sự kiện"
 
 #: pretix/base/exporters/orderlist.py:142 pretix/base/notifications.py:186
 #: pretix/control/templates/pretixcontrol/search/orders.html:53
@@ -1655,7 +1655,7 @@ msgstr "Số hóa đơn"
 #: pretix/base/invoice.py:350 pretix/base/invoice.py:792
 msgctxt "invoice"
 msgid "Cancellation date"
-msgstr ""
+msgstr "Ngày huỷ"
 
 #: pretix/base/invoice.py:356
 msgctxt "invoice"
@@ -1702,7 +1702,7 @@ msgstr ""
 #, python-brace-format
 msgctxt "invoice"
 msgid "Invoice {num}"
-msgstr ""
+msgstr "Hoá đơn {num}"
 
 #: pretix/base/invoice.py:471
 msgctxt "invoice"
@@ -1794,12 +1794,12 @@ msgstr "Tổng giá trị"
 #: pretix/base/invoice.py:607
 msgctxt "invoice"
 msgid "Tax"
-msgstr ""
+msgstr "Thuế"
 
 #: pretix/base/invoice.py:637
 msgctxt "invoice"
 msgid "Included taxes"
-msgstr ""
+msgstr "Đã gồm thuế"
 
 #: pretix/base/invoice.py:665
 #, python-brace-format
@@ -1862,7 +1862,7 @@ msgstr "Nhận thông báo theo các thiết lập của tôi dưới đây"
 
 #: pretix/base/models/auth.py:113
 msgid "If turned off, you will not get any notifications."
-msgstr ""
+msgstr "Nếu tắt, bạn sẽ không nhận được bất kỳ thông báo nào."
 
 #: pretix/base/models/auth.py:126
 #: pretix/control/templates/pretixcontrol/order/index.html:181
@@ -2005,7 +2005,7 @@ msgstr "Sự kết thúc của giai đoạn presale phải là muộn hơn bắt
 
 #: pretix/base/models/event.py:44
 msgid "The end of the event has to be later than its start."
-msgstr ""
+msgstr "Sự kiện kết thúc phải muộn hơn thời điểm bắt đầu."
 
 #: pretix/base/models/event.py:351
 msgid ""
@@ -2172,26 +2172,26 @@ msgstr ""
 
 #: pretix/base/models/event.py:1045
 msgid "The event slug cannot be changed."
-msgstr ""
+msgstr "Không thể thay đổi slug sự kiện."
 
 #: pretix/base/models/event.py:1048
 msgid "This slug has already been used for a different event."
-msgstr ""
+msgstr "Slug này đã được sử dụng cho một sự kiện khác."
 
 #: pretix/base/models/event.py:1054
 msgid "The event cannot end before it starts."
-msgstr ""
+msgstr "Sự kiện không thể kết thúc trước khi nó bắt đầu."
 
 #: pretix/base/models/event.py:1060
 msgid "The event's presale cannot end before it starts."
-msgstr ""
+msgstr "Việc bán trước của sự kiện không thể kết thúc trước khi sự kiện bắt đầu."
 
 #: pretix/base/models/event.py:1089 pretix/base/models/items.py:275
 #: pretix/base/models/items.py:647 pretix/control/forms/filter.py:737
 #: pretix/control/forms/filter.py:1226
 #: pretix/control/templates/pretixcontrol/users/index.html:46
 msgid "Active"
-msgstr "tích cực"
+msgstr "Hoạt động"
 
 #: pretix/base/models/event.py:1090
 msgid ""
@@ -2206,6 +2206,8 @@ msgid ""
 "If selected, this event will show up publicly on the list of dates for your "
 "event."
 msgstr ""
+"Nếu được chọn, sự kiện này sẽ hiển thị công khai trong danh sách các ngày "
+"diễn ra sự kiện của bạn."
 
 #: pretix/base/models/event.py:1131 pretix/base/settings.py:1825
 msgid "Frontpage text"
@@ -2221,15 +2223,15 @@ msgstr "Ngày trong chuỗi sự kiện"
 
 #: pretix/base/models/event.py:1251
 msgid "One or more variations do not belong to this event."
-msgstr ""
+msgstr "Một hoặc nhiều biến thể không thuộc về sự kiện này."
 
 #: pretix/base/models/event.py:1335 pretix/base/models/items.py:1518
 msgid "Can not contain spaces or special characters except underscores"
-msgstr ""
+msgstr "Không được chứa khoảng trắng hoặc ký tự đặc biệt ngoại trừ dấu gạch dưới"
 
 #: pretix/base/models/event.py:1340 pretix/base/models/items.py:1523
 msgid "The property name may only contain letters, numbers and underscores."
-msgstr ""
+msgstr "Tên thuộc tính chỉ có thể chứa chữ cái, số và dấu gạch dưới."
 
 #: pretix/base/models/fields.py:12
 msgid "No value can contain the delimiter character."
@@ -2237,11 +2239,11 @@ msgstr "Không có giá trị có thể chứa ký tự dấu phân cách."
 
 #: pretix/base/models/giftcards.py:58
 msgid "The gift card code may only contain letters, numbers, dots and dashes."
-msgstr ""
+msgstr "Mã thẻ quà tặng chỉ có thể chứa chữ cái, số, dấu chấm và dấu gạch ngang."
 
 #: pretix/base/models/giftcards.py:63
 msgid "Test mode card"
-msgstr ""
+msgstr "Thẻ chế độ test"
 
 #: pretix/base/models/giftcards.py:67
 #: pretix/control/templates/pretixcontrol/order/index.html:178
@@ -9001,15 +9003,15 @@ msgstr "Số tiền thanh toán"
 #: pretix/plugins/reports/exporters.py:540
 #: pretix/plugins/reports/exporters.py:757
 msgid "Payment date"
-msgstr ""
+msgstr "Ngày thanh toán"
 
 #: pretix/control/forms/orders.py:188
 msgid "Re-calculate taxes"
-msgstr "thuế tính lại"
+msgstr "Tính lại thuế"
 
 #: pretix/control/forms/orders.py:191
 msgid "Do not re-calculate taxes"
-msgstr ""
+msgstr "Không tính lại thuế"
 
 #: pretix/control/forms/orders.py:192
 msgid ""
@@ -9027,7 +9029,7 @@ msgstr ""
 
 #: pretix/control/forms/orders.py:198
 msgid "Issue a new invoice if required"
-msgstr ""
+msgstr "Xuất hóa đơn mới nếu được yêu cầu"
 
 #: pretix/control/forms/orders.py:202
 msgid ""
@@ -9044,15 +9046,15 @@ msgstr "Thông báo cho người sử dụng"
 #: pretix/control/forms/orders.py:211
 msgid ""
 "Send an email to the customer notifying that their order has been changed."
-msgstr ""
+msgstr "Gửi email cho khách hàng thông báo rằng đơn đặt hàng của họ đã được thay đổi."
 
 #: pretix/control/forms/orders.py:215
 msgid "Allow to overbook quotas when performing this operation"
-msgstr ""
+msgstr "Cho phép đăng ký trước quá hạn ngạch khi thực hiện thao tác này"
 
 #: pretix/control/forms/orders.py:231
 msgid "Add-on to"
-msgstr "Add-on để"
+msgstr ""
 
 #: pretix/control/forms/orders.py:236
 #: pretix/control/templates/pretixcontrol/checkin/index.html:74
@@ -9060,11 +9062,11 @@ msgstr "Add-on để"
 #: pretix/control/views/vouchers.py:70
 #: pretix/presale/templates/pretixpresale/event/checkout_questions.html:84
 msgid "Seat"
-msgstr ""
+msgstr "Ghế"
 
 #: pretix/control/forms/orders.py:243
 msgid "Including taxes, if any. Keep empty for the product's default price"
-msgstr ""
+msgstr "Đã bao gồm thuế nếu có. Giữ trống cho giá mặc định của sản phẩm"
 
 #: pretix/control/forms/orders.py:341 pretix/control/forms/orders.py:345
 #: pretix/control/forms/orders.py:356 pretix/control/forms/orders.py:393
@@ -9151,7 +9153,7 @@ msgstr "Bạn cần chỉ định số tiền để được hoàn lại một p
 
 #: pretix/control/forms/orders.py:595
 msgid "Cancel all dates"
-msgstr ""
+msgstr "Huỷ tất cả các ngày"
 
 #: pretix/control/forms/orders.py:614
 msgid "Automatically refund money if possible"
@@ -18709,7 +18711,7 @@ msgstr "Bao gồm các câu hỏi"
 
 #: pretix/plugins/checkinlists/exporters.py:231
 msgid "Check-in list (PDF)"
-msgstr ""
+msgstr "Danh sách check-in (PDF)"
 
 #. Translators: maximum 5 characters
 #: pretix/plugins/checkinlists/exporters.py:293
@@ -18719,7 +18721,7 @@ msgstr "đã thanh toán"
 
 #: pretix/plugins/checkinlists/exporters.py:405
 msgid "Checked out"
-msgstr "Đã ra"
+msgstr "Đã check-out"
 
 #: pretix/plugins/checkinlists/exporters.py:405
 #: pretix/plugins/checkinlists/exporters.py:577
@@ -18730,19 +18732,19 @@ msgstr "Tự động check-in"
 #: pretix/plugins/checkinlists/exporters.py:572
 #: pretix/plugins/paypal/payment.py:87
 msgid "Secret"
-msgstr ""
+msgstr "Mã bí mật"
 
 #: pretix/plugins/checkinlists/exporters.py:558
 msgid "Check-in log (all successful scans)"
-msgstr ""
+msgstr "Nhật ký check-in (tất cả các lệnh quét thành công)"
 
 #: pretix/plugins/checkinlists/exporters.py:569
 msgid "Scan type"
-msgstr ""
+msgstr "Kiểu quét"
 
 #: pretix/plugins/checkinlists/exporters.py:575
 msgid "Device"
-msgstr "thiết bị"
+msgstr "Thiết bị"
 
 #: pretix/plugins/checkinlists/exporters.py:576
 msgid "Offline override"
@@ -19052,7 +19054,7 @@ msgstr ""
 
 #: pretix/plugins/reports/__init__.py:10 pretix/plugins/reports/__init__.py:13
 msgid "Report exporter"
-msgstr ""
+msgstr "Xuất bảng biểu"
 
 #: pretix/plugins/reports/__init__.py:17
 msgid "This plugin allows you to generate printable reports about your sales."
@@ -19079,7 +19081,7 @@ msgstr "Đơn hàng theo sản phẩm"
 
 #: pretix/plugins/reports/exporters.py:230
 msgid "(excl. taxes)"
-msgstr ""
+msgstr "(trừ thuế)"
 
 #: pretix/plugins/reports/exporters.py:230
 msgid "(incl. taxes)"
@@ -19120,15 +19122,15 @@ msgstr ""
 #: pretix/plugins/reports/exporters.py:718
 #: pretix/plugins/reports/exporters.py:758
 msgid "Tax"
-msgstr ""
+msgstr "Thuế"
 
 #: pretix/plugins/reports/exporters.py:511
 msgid "List of orders with taxes"
-msgstr ""
+msgstr "Danh sách đơn đặt hàng với các loại thuế"
 
 #: pretix/plugins/reports/exporters.py:517
 msgid "Taxes by country"
-msgstr ""
+msgstr "Thuế theo quốc gia"
 
 #: pretix/plugins/reports/exporters.py:518
 msgid "Business customers"
@@ -19143,7 +19145,7 @@ msgstr "Mã nước"
 #: pretix/plugins/returnurl/__init__.py:12
 #: pretix/plugins/returnurl/templates/returnurl/settings.html:5
 msgid "Redirection from order page"
-msgstr "Redirection từ trang đặt hàng"
+msgstr "Chuyển hướng từ trang đặt hàng"
 
 #: pretix/plugins/returnurl/__init__.py:16
 msgid ""
