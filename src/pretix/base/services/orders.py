@@ -58,6 +58,9 @@ from pretix.base.signals import (
 from pretix.celery_app import app
 from pretix.helpers.models import modelcopy
 from pretix.helpers.periodic import minimum_interval
+# quang's
+from pretix.base.services.locking_advance import AdvanceLockManager
+# quang's
 
 error_messages = {
     'unavailable': _('Some of the products you selected were no longer available. '
@@ -928,11 +931,35 @@ def _perform_order(event: Event, payment_provider: str, position_ids: List[str],
 
     lockfn = NoLockManager
     locked = False
-    if positions.filter(Q(voucher__isnull=False) | Q(expires__lt=now() + timedelta(minutes=2)) | Q(seat__isnull=False)).exists():
-        # Performance optimization: If no voucher is used and no cart position is dangerously close to its expiry date,
-        # creating this order shouldn't be prone to any race conditions and we don't need to lock the event.
+
+    # quang's
+    expire = now() + timedelta(minutes=2)
+    check_positions = positions.filter(Q(voucher__isnull=False) | Q(expires__lt=expire) | Q(seat__isnull=False))
+    count_voucher = 0
+    count_expire = 0
+    seats = []
+    for position in check_positions:
+        if position.voucher_id:
+            count_voucher += 1
+        elif position.expires < expire:
+            count_expire += 1
+        elif position.seat_id:
+            seats.append(position.seat_id)
+    if count_voucher > 0 or count_expire > 0:
         locked = True
         lockfn = event.lock
+    elif len(seats) > 0:
+        locked = True
+        # Must check for subevent
+        keys = ['event_%s_seat_%s' % (event.id, seat) for seat in seats]
+        lockfn = AdvanceLockManager(keys)
+    # quang's
+
+    # if positions.filter(Q(voucher__isnull=False) | Q(expires__lt=now() + timedelta(minutes=2)) | Q(seat__isnull=False)).exists():
+        # # Performance optimization: If no voucher is used and no cart position is dangerously close to its expiry date,
+        # # creating this order shouldn't be prone to any race conditions and we don't need to lock the event.
+        # locked = True
+        # lockfn = event.lock
 
     with lockfn() as now_dt:
         positions = list(

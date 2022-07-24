@@ -1422,7 +1422,7 @@ class OrderPayment(models.Model):
         }, user=user, auth=auth)
 
     def confirm(self, count_waitinglist=True, send_mail=True, force=False, user=None, auth=None, mail_text='',
-                ignore_date=False, lock=True, payment_date=None):
+                ignore_date=False, lock=False, payment_date=None):
         """
         Marks the payment as complete. If possible, this also marks the order as paid if no further
         payment is required
