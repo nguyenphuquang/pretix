@@ -42,7 +42,7 @@ openpyxl==3.0.*
 django-oauth-toolkit==1.2.*
 oauthlib==3.1.*
 django-jsonfallback>=2.1.2
-psycopg2-binary
+psycopg2-binary>=2.8,<2.9
 tqdm==4.*
 # Stripe
 stripe==2.42.*
@@ -69,5 +69,8 @@ packaging
 tlds>=2020041600
 text-unidecode==1.*
 protobuf==3.13.*
-cryptography
+cryptography==3.3.*
 sepaxml==2.3.*
+django-storages
+boto3
+django-minio-storage
